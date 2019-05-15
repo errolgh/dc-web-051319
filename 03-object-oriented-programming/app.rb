@@ -15,37 +15,17 @@ class Cat
     # attr_reader :color, :name, :number_of_legs
     # attr_writer :color, :name, :number_of_legs
     attr_accessor :color, :name, :number_of_legs
-    attr_writer :floofiness
-    attr_reader :species
+    attr_writer :floofiness # ella.floofiness=100
+    attr_reader :species # ella.species >> "feline"
 
     def initialize(name, floofiness, number_of_legs=4)
         @name = name 
         @floofiness = floofiness
         @number_of_legs = number_of_legs
         @species = "feline"
+        # send an email to my mom
+        # set up my DVR to record the new 90210
     end
-
-    # def color=(color)
-    #     @color = color
-    # end
-
-    # def color 
-    #     @color
-    # end
-
-    # def name=(new_name)
-    #     # setter
-    #     @name = new_name # instance variable
-    # end
-
-    # def name
-    #     # getter
-    #     return @name
-    # end
-
-    # def floofiness=(floofiness)
-    #     @floofiness = floofiness
-    # end
 
     def floofiness
         if @floofiness > 6
@@ -54,14 +34,6 @@ class Cat
             return "I am not so floofy, but still better than a dog."
         end
     end
-
-    # def number_of_legs=(num)
-    #     @number_of_legs = num 
-    # end
-
-    # def number_of_legs
-    #     @number_of_legs
-    # end
 
     def meow
         "Meow, I am a beautiful kitty"
