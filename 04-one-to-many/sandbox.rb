@@ -1,7 +1,6 @@
 class School
 
-    attr_accessor :name
-    attr_reader :instructors
+    attr_reader :name, :instructors
 
     def initialize(name)
         @name = name
@@ -12,16 +11,16 @@ class School
         @instructors << instructor
     end
 
-    def find_instructor_named(name)
-        # iterate through instructor array
-        puts self
-        self.instructors.find do |instructor|
-        # find the one whose name matches inputted parameter
-            instructor.name == name
-        end
-
+    def print_favorite_foods
+        foods = self.instructors.map {|instructor| instructor.favorite_food}
+        puts foods.join(" & ")
     end
 
+    # def edit_instructor(original_instructor, new_name)
+    #     # get the specific instructor
+    #     index = self.instructors.index(original_instructor)
+    #     self.instructors[index] = new_name
+    # end
 end
 
 class Instructor
@@ -29,23 +28,20 @@ class Instructor
     attr_accessor :name, :favorite_food
 
     def initialize(name, favorite_food)
-        @name, @favorite_food = name, favorite_food
+        @name = name
+        @favorite_food = favorite_food
     end
 
-    def introduce 
-        puts "Hi my name is #{self.name}"
-    end 
+
 end
 
 flatiron = School.new("Flatiron")
-paul = Instructor.new("Paul", "Pizza")
-melanie = Instructor.new("Melanie", "Indian")
-jake = Instructor.new("Jake", "Chips")
+
+puts flatiron.name == "Flatiron"
+paul = Instructor.new("Paul", "pizza")
+joseph = Instructor.new("Joseph", "broccoli")
 
 flatiron.add_instructor(paul)
-flatiron.add_instructor(melanie)
-flatiron.add_instructor(jake)
+flatiron.add_instructor(joseph)
 
-# puts flatiron.instructors[1]
-# puts flatiron.instructors[1].introduce
-print flatiron.find_instructor_named("Melanie") == melanie
+flatiron.print_favorite_foods
