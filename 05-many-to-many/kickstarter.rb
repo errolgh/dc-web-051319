@@ -34,5 +34,5 @@ marty = Backer.new("Marty McFly")
 
 hoverboard.add_backer(marty)
 
-puts hoverboard.backers.collect {|x| x.name}
-puts marty.backed_projects.collect {|x| x.name}
+p hoverboard.backers
+# p marty.backed_projects
