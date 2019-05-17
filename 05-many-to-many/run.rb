@@ -24,5 +24,5 @@ puts Like.all.include?(like1)
 puts "liked_tweets returns all tweets this user has liked"
 puts coffee_dad.liked_tweets.include?(tweet5)
 
-# binding.pry
+binding.pry
 0
