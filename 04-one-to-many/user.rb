@@ -12,7 +12,10 @@ class User
     end
 
     def tweets
-        # Tweet.all 
+        # returns array of all tweets belonging to user
+        Tweet.all.find_all do |tweet|
+            tweet.user == self
+        end
     end
 end
 
