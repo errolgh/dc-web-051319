@@ -37,39 +37,24 @@
 
 ```
 
-6. Check out the [Faker gem](https://github.com/stympy/faker). `gem install faker`, open up irb, run `require 'faker'` and then generate a fake name for yourself using `Faker::Name.name`. How would you update your name in the fans table to be your new name?
 
-   ```sql
-
-   ```
-
-7. Write the SQL to return fans that are not fans of the black eyed peas.
+6. Write the SQL to return fans that are not fans of the black eyed peas.
 
 ```sql
 
 ```
 
-8. Write the SQL to display an artists name next to their album title
+7. Write the SQL to display an artists name next to their album title
 
 ```sql
 
 ```
 
-9. Write the SQL to display artist name, album name and number of tracks on that album
 
-```sql
-
-```
-
-10. Write the SQL to return the name of all of the artists in the 'Pop' Genre
-
-```sql
-
-```
 
 ## BONUS (very hard)
 
-11. I want to return the names of the artists and their number of rock tracks
+8. I want to return the names of the artists and their number of rock tracks
     who play Rock music
     and have move than 30 tracks
     in order of the number of rock tracks that they have
