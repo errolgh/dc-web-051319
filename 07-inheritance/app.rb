@@ -1,5 +1,26 @@
 require 'pry'
 
+# puts "hi".methods
 
-binding.pry
-0
+class Object
+
+    def frozen?
+        puts "let it go"
+    end
+
+    def trust
+
+    end
+
+
+end
+class Thing
+
+
+    def my_method
+    end
+end
+
+x = Thing.new
+
+puts x.methods
