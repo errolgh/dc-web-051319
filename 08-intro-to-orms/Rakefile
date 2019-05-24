@@ -5,10 +5,28 @@ task :console do
     Pry.start
 end
 
-desc "Say hello"
-task :hi do
-    puts "Hi everybody!"
+desc "Say hello to everyone"
+task :say_hi do 
+    puts "Hello Mod One!"
 end
 
+desc "set up book database"
+task :set_up_book_db do 
+    book_sql = <<-SQL
+        CREATE TABLE IF NOT EXISTS books 
+            (id integer PRIMARY KEY,
+             title TEXT,
+             author_id INTEGER)
+    SQL
+    DB.execute(book_sql)
+end
 
-
+desc "set up author database"
+task :set_up_author_db do 
+    author_sql = <<-SQL
+        CREATE TABLE IF NOT EXISTS authors 
+            (id integer PRIMARY KEY,
+             name TEXT)
+    SQL
+    DB.execute(author_sql)
+end
