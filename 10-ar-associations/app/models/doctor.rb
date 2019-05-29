@@ -10,8 +10,4 @@ class Doctor < ActiveRecord::Base
     #     end
     # end
 
-    # def change_specialty(new_specialty)
-    #     return "Go back to school first"
-    # end
-    
 end
