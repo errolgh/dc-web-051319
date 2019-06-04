@@ -10,6 +10,11 @@
 
     <div><%= @book.snippet %></div>
 
+    <form action="/books/<%= @book.id %>" method="POST">
+        <input type="hidden" name="_method" value="delete">
+        <input type="submit" value="Delete this book">
+    </form>
+    
     <a href="/books">Book Index Page</a>
 </body>
 </html>

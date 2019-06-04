@@ -7,8 +7,8 @@
 
     <h1>Hello World!</h1>
 
-    <% 5.times do %>
-        <h2>Happy Monday!</h2>
+    <% @count.times do %>
+        <h2>Happy <%= @dayname %>!</h2>
     <% end %>
 
     <%= "hello everyone".upcase %>
