@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detail Page</title>
+</head>
+<body>
+
+    <h2><%= @book.title %></h2>
+    <div>by <%= @book.author %></div>
+
+    <div><%= @book.snippet %></div>
+
+    <form action="/books/<%= @book.id %>" method="POST">
+        <input type="hidden" name="_method" value="delete">
+        <input type="submit" value="Delete this book">
+    </form>
+    
+    <a href="/books">Book Index Page</a>
+</body>
+</html>
