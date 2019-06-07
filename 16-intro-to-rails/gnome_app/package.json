@@ -1,0 +1,5 @@
+{
+  "name": "gnome_app",
+  "private": true,
+  "dependencies": {}
+}
