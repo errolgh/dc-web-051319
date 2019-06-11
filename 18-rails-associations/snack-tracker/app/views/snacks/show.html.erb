@@ -1,0 +1,15 @@
+<h1><%= @snack.name %></h1>
+
+<div class="snack-details">
+
+    <h2>Calories: <%= @snack.calories %></h2>
+    <h2>Deliciousness: <%= @snack.deliciousness %></h2>
+
+</div>
+
+<%= form_tag @snack, method: "DELETE" do %>
+    <%= submit_tag "Delete" %>
+<% end %>
+
+<%= link_to "Edit This Snack", edit_snack_path(@snack) %>
+<%= link_to "Snacks Home", snacks_path %>
