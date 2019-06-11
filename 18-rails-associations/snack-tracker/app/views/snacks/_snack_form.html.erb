@@ -5,5 +5,11 @@
     <%= f.number_field :calories %>
     <%= f.label :deliciousness, "Yumminess" %>
     <%= f.select :deliciousness, (1..10) %>
+    <%= f.label :retailer_id %>
+    <%= f.collection_select(:retailer_id, Retailer.all, :id, :name, {:prompt => 'Choose a Retailer'}) %>
     <%= f.submit @submit_text %>
 <% end %>
+
+
+
+

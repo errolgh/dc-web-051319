@@ -2,8 +2,18 @@ class SnacksController < ApplicationController
   
   before_action :find_snack, only: [:show, :edit, :update, :destroy]
 
+  def favorite_snacks
+
+    render :favorite
+  end
+
   def index
-    @snacks = Snack.all
+    if params[:retailer_id]
+      retailer = Retailer.find(params[:retailer_id])
+      @snacks = retailer.snacks
+    else
+      @snacks = Snack.all
+    end
     # render :index
   end
 
@@ -41,7 +51,7 @@ class SnacksController < ApplicationController
   end
 
   def snack_params
-    params.require(:snack).permit(:name, :calories, :deliciousness)
+    params.require(:snack).permit(:name, :calories, :deliciousness, :retailer_id)
 
   end
 end

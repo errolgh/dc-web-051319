@@ -4,7 +4,7 @@
 <ul id="snack-list">
     <% @snacks.each do |snack| %>
         <li class="snack-list-item">
-            <%= link_to snack.name, snack_path(snack) %>
+            <%= link_to snack.name, retailer_snack_path(snack.retailer, snack) %>
         </li>
     <% end %>
 </ul>

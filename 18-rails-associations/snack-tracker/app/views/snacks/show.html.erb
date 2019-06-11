@@ -1,4 +1,9 @@
 <h1><%= @snack.name %></h1>
+<% if @snack.retailer %>
+    <h3>Made by: <%= link_to @snack.retailer.name, retailer_path(@snack.retailer) %></h3>
+<% else %>
+    <div>Made by a mystery</div>
+<% end %>
 
 <div class="snack-details">
 
