@@ -14,7 +14,6 @@ class SnacksController < ApplicationController
     else
       @snacks = Snack.all
     end
-    # render :index
   end
 
   def show
@@ -26,8 +25,13 @@ class SnacksController < ApplicationController
   end
 
   def create
-    snack = Snack.create(snack_params)
-    redirect_to snack
+    @snack = Snack.new(snack_params)
+    if @snack.valid?
+      @snack.save
+      redirect_to snack_path(@snack)
+    else
+      render :new
+    end
   end
 
   def edit # get request
@@ -35,8 +39,12 @@ class SnacksController < ApplicationController
   end
 
   def update # put/patch request
-    @snack.update(snack_params)
-    redirect_to @snack
+    if @snack.valid?
+      @snack.update(snack_params)
+      redirect_to @snack
+    else
+      render :edit
+    end
   end
 
   def destroy

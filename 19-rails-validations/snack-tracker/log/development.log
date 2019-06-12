@@ -2158,3 +2158,1175 @@ Processing by SnacksController#show as HTML
 Completed 200 OK in 405ms (Views: 381.4ms | ActiveRecord: 2.6ms)
 
 
+Started GET "/" for ::1 at 2019-06-12 09:50:03 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/paul.nicholsen/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/paul.nicholsen/.rvm/gems/ruby-2.6.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/paul.nicholsen/.rvm/gems/ruby-2.6.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (2.9ms)
+Completed 200 OK in 18ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/snacks" for ::1 at 2019-06-12 09:50:06 -0400
+Processing by SnacksController#index as HTML
+  Rendering snacks/index.html.erb within layouts/application
+  [1m[36mSnack Load (0.3ms)[0m  [1m[34mSELECT "snacks".* FROM "snacks"[0m
+  ↳ app/views/snacks/index.html.erb:5
+  [1m[36mRetailer Load (0.2ms)[0m  [1m[34mSELECT  "retailers".* FROM "retailers" WHERE "retailers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/snacks/index.html.erb:7
+  [1m[36mCACHE Retailer Load (0.0ms)[0m  [1m[34mSELECT  "retailers".* FROM "retailers" WHERE "retailers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/snacks/index.html.erb:7
+  [1m[36mRetailer Load (0.1ms)[0m  [1m[34mSELECT  "retailers".* FROM "retailers" WHERE "retailers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/snacks/index.html.erb:7
+  Rendered snacks/index.html.erb within layouts/application (30.8ms)
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 2.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"snacks", :id=>"4", :retailer_id=>nil}, missing required keys: [:retailer_id]):
+    4: <ul id="snack-list">
+    5:     <% @snacks.each do |snack| %>
+    6:         <li class="snack-list-item">
+    7:             <%= link_to snack.name, retailer_snack_path(snack.retailer, snack) %>
+    8:         </li>
+    9:     <% end %>
+   10: </ul>
+  
+app/views/snacks/index.html.erb:7:in `block in _app_views_snacks_index_html_erb__4225490505154605373_70288609322320'
+app/views/snacks/index.html.erb:5:in `_app_views_snacks_index_html_erb__4225490505154605373_70288609322320'
+Started GET "/snacks" for ::1 at 2019-06-12 09:51:12 -0400
+Processing by SnacksController#index as HTML
+  Rendering snacks/index.html.erb within layouts/application
+  [1m[36mSnack Load (0.2ms)[0m  [1m[34mSELECT "snacks".* FROM "snacks"[0m
+  ↳ app/views/snacks/index.html.erb:5
+  Rendered snacks/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 259ms (Views: 256.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/snacks/new" for ::1 at 2019-06-12 09:51:22 -0400
+Processing by SnacksController#new as HTML
+  Rendering snacks/new.html.erb within layouts/application
+  [1m[36mRetailer Load (0.3ms)[0m  [1m[34mSELECT "retailers".* FROM "retailers"[0m
+  ↳ app/views/snacks/_snack_form.html.erb:9
+  Rendered snacks/_snack_form.html.erb (17.4ms)
+  Rendered snacks/new.html.erb within layouts/application (19.4ms)
+Completed 200 OK in 69ms (Views: 62.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/snacks" for ::1 at 2019-06-12 09:51:28 -0400
+Processing by SnacksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6yhLRq0n97C5Mug+mhYGi4tYwm1BFH5GQcJNUD8RateOBt5gG0ZK3Mci2oKLrgf1TgChdfY+Kn3iRVdgdrr0vw==", "snack"=>{"name"=>"", "calories"=>"500", "deliciousness"=>"1", "retailer_id"=>""}, "commit"=>"Make a new snack"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/snacks_controller.rb:29
+  [1m[36mSnack Create (0.4ms)[0m  [1m[32mINSERT INTO "snacks" ("name", "calories", "deliciousness", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", ""], ["calories", 500], ["deliciousness", 1], ["created_at", "2019-06-12 13:51:28.661598"], ["updated_at", "2019-06-12 13:51:28.661598"]]
+  ↳ app/controllers/snacks_controller.rb:29
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/snacks_controller.rb:29
+Redirected to http://localhost:3000/snacks/11
+Completed 302 Found in 7ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/snacks/11" for ::1 at 2019-06-12 09:51:28 -0400
+Processing by SnacksController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mSnack Load (0.3ms)[0m  [1m[34mSELECT  "snacks".* FROM "snacks" WHERE "snacks"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/snacks_controller.rb:50
+  Rendering snacks/show.html.erb within layouts/application
+  Rendered snacks/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 21ms (Views: 18.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/snacks" for ::1 at 2019-06-12 09:52:09 -0400
+Processing by SnacksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v0hfCrEwz+gt6JCNqG8qV78MIrVS7eOra1AoH33oY9WasxKM1u/+8L5ZlDG18y8elgJlusRjiA/9SmdsHRENAQ==", "snack"=>{"name"=>"Everlasting Gobstoppers", "calories"=>"1", "deliciousness"=>"100", "retailer_id"=>"4"}, "commit"=>"Make a new snack"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/snacks_controller.rb:29
+  [1m[36mSnack Create (0.5ms)[0m  [1m[32mINSERT INTO "snacks" ("name", "calories", "deliciousness", "created_at", "updated_at", "retailer_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Everlasting Gobstoppers"], ["calories", 1], ["deliciousness", 100], ["created_at", "2019-06-12 13:52:09.952179"], ["updated_at", "2019-06-12 13:52:09.952179"], ["retailer_id", 4]]
+  ↳ app/controllers/snacks_controller.rb:29
+  [1m[35m (3.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/snacks_controller.rb:29
+Redirected to http://localhost:3000/snacks/12
+Completed 302 Found in 9ms (ActiveRecord: 4.3ms)
+
+
+Started GET "/snacks/12" for ::1 at 2019-06-12 09:52:09 -0400
+Processing by SnacksController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mSnack Load (0.2ms)[0m  [1m[34mSELECT  "snacks".* FROM "snacks" WHERE "snacks"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/snacks_controller.rb:50
+  Rendering snacks/show.html.erb within layouts/application
+  [1m[36mRetailer Load (0.2ms)[0m  [1m[34mSELECT  "retailers".* FROM "retailers" WHERE "retailers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/snacks/show.html.erb:2
+  Rendered snacks/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 23ms (Views: 20.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/snacks/new" for ::1 at 2019-06-12 10:02:48 -0400
+Processing by SnacksController#new as HTML
+  Rendering snacks/new.html.erb within layouts/application
+  [1m[36mRetailer Load (0.3ms)[0m  [1m[34mSELECT "retailers".* FROM "retailers"[0m
+  ↳ app/views/snacks/_snack_form.html.erb:9
+  Rendered snacks/_snack_form.html.erb (19.4ms)
+  Rendered snacks/new.html.erb within layouts/application (20.3ms)
+Completed 200 OK in 48ms (Views: 36.5ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/snacks" for ::1 at 2019-06-12 10:02:54 -0400
+Processing by SnacksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"h3fQSeCdfo7ts943vWGIIjqXIE0qdNCussRCYSI8oEGijJ3Ph0JPln4C2oug/Y1rE5lnQrz6uwok3g0SQsXOlQ==", "snack"=>{"name"=>"", "calories"=>"500", "deliciousness"=>"1", "retailer_id"=>"3"}, "commit"=>"Make a new snack"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/snacks_controller.rb:29
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/snacks_controller.rb:29
+Redirected to http://localhost:3000/snacks
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/snacks" for ::1 at 2019-06-12 10:02:54 -0400
+Processing by SnacksController#index as HTML
+  Rendering snacks/index.html.erb within layouts/application
+  [1m[36mSnack Load (0.2ms)[0m  [1m[34mSELECT "snacks".* FROM "snacks"[0m
+  ↳ app/views/snacks/index.html.erb:5
+  Rendered snacks/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 24ms (Views: 22.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/snacks/new" for ::1 at 2019-06-12 10:04:33 -0400
+Processing by SnacksController#new as HTML
+  Rendering snacks/new.html.erb within layouts/application
+  [1m[36mRetailer Load (0.2ms)[0m  [1m[34mSELECT "retailers".* FROM "retailers"[0m
+  ↳ app/views/snacks/_snack_form.html.erb:9
+  Rendered snacks/_snack_form.html.erb (8.1ms)
+  Rendered snacks/new.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 44ms (Views: 34.6ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/snacks" for ::1 at 2019-06-12 10:04:36 -0400
+Processing by SnacksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v5V5qntgw/z60dYjyYNaYOVToO2u6pWGhJpCx3iibtHau+yMzQF+kITB5J/YO1seIAvD9RnAwb0nHVj3MQnwuQ==", "snack"=>{"name"=>"", "calories"=>"555", "deliciousness"=>"1", "retailer_id"=>""}, "commit"=>"Make a new snack"}
+  [1m[35m (2.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/snacks_controller.rb:29
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/snacks_controller.rb:29
+Redirected to http://localhost:3000/snacks
+Completed 500 Internal Server Error in 17853ms (ActiveRecord: 2.3ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `run_callbacks'
+Started GET "/snacks/new" for ::1 at 2019-06-12 10:05:06 -0400
+Processing by SnacksController#new as HTML
+  Rendering snacks/new.html.erb within layouts/application
+  [1m[36mRetailer Load (1.0ms)[0m  [1m[34mSELECT "retailers".* FROM "retailers"[0m
+  ↳ app/views/snacks/_snack_form.html.erb:9
+  Rendered snacks/_snack_form.html.erb (161.5ms)
+  Rendered snacks/new.html.erb within layouts/application (165.8ms)
+Completed 200 OK in 587ms (Views: 449.6ms | ActiveRecord: 25.3ms)
+
+
+Started POST "/snacks" for ::1 at 2019-06-12 10:05:09 -0400
+Processing by SnacksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZOTBgNg5fPzXOr9dx+WOkORtsQ5OCjMD5Vn+8YXk4CVBH4wGv+ZN5ESLu+HaeYvZzWP2AdiEWKdzQ7GC5R2O8Q==", "snack"=>{"name"=>"", "calories"=>"", "deliciousness"=>"1", "retailer_id"=>""}, "commit"=>"Make a new snack"}
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/snacks_controller.rb:28
+  [1m[35m (1.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/snacks_controller.rb:28
+Completed 500 Internal Server Error in 89589ms (ActiveRecord: 1.4ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/snacks_controller.rb:30:in `create'
+Started GET "/snacks/new" for ::1 at 2019-06-12 10:07:57 -0400
+Processing by SnacksController#new as HTML
+  Rendering snacks/new.html.erb within layouts/application
+  [1m[36mRetailer Load (10.5ms)[0m  [1m[34mSELECT "retailers".* FROM "retailers"[0m
+  ↳ app/views/snacks/_snack_form.html.erb:9
+  Rendered snacks/_snack_form.html.erb (177.2ms)
+  Rendered snacks/new.html.erb within layouts/application (181.9ms)
+Completed 200 OK in 679ms (Views: 526.1ms | ActiveRecord: 22.4ms)
+
+
+Started POST "/snacks" for ::1 at 2019-06-12 10:08:05 -0400
+Processing by SnacksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aqj4sYvzXO0GKcXXDLs/zvHGTspyQ+3Chu/zKa91GkZPU7U37Cxt9ZWYwWsRJzqH2MgJxeTNhmYQ9bxaz4x0kg==", "snack"=>{"name"=>"", "calories"=>"450", "deliciousness"=>"1", "retailer_id"=>"5"}, "commit"=>"Make a new snack"}
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/snacks_controller.rb:28
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/snacks_controller.rb:28
+  Rendering snacks/new.html.erb within layouts/application
+  [1m[36mRetailer Load (1.3ms)[0m  [1m[34mSELECT "retailers".* FROM "retailers"[0m
+  ↳ app/views/snacks/_snack_form.html.erb:9
+  Rendered snacks/_snack_form.html.erb (81.9ms)
+  Rendered snacks/new.html.erb within layouts/application (94.3ms)
+Completed 200 OK in 509ms (Views: 454.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/snacks/new" for ::1 at 2019-06-12 10:10:17 -0400
+Processing by SnacksController#new as HTML
+  Rendering snacks/new.html.erb within layouts/application
+  [1m[36mRetailer Load (7.9ms)[0m  [1m[34mSELECT "retailers".* FROM "retailers"[0m
+  ↳ app/views/snacks/_snack_form.html.erb:9
+  Rendered snacks/_snack_form.html.erb (81.1ms)
+  Rendered snacks/new.html.erb within layouts/application (90.9ms)
+Completed 200 OK in 501ms (Views: 472.8ms | ActiveRecord: 7.9ms)
+
+
+Started POST "/snacks" for ::1 at 2019-06-12 10:10:20 -0400
+Processing by SnacksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YufgU+4/XC6fQR6rMRrhr5VQw455jbdZmH0FmU03pxpHHK3VieBtNgzwGhcshuTmvF6Ege8D3P0OZ0rqLc7Jzg==", "snack"=>{"name"=>"", "calories"=>"", "deliciousness"=>"1", "retailer_id"=>""}, "commit"=>"Make a new snack"}
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/snacks_controller.rb:28
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/snacks_controller.rb:28
+  Rendering snacks/new.html.erb within layouts/application
+  [1m[36mRetailer Load (1.0ms)[0m  [1m[34mSELECT "retailers".* FROM "retailers"[0m
+  ↳ app/views/snacks/_snack_form.html.erb:9
+  Rendered snacks/_snack_form.html.erb (80.2ms)
+  Rendered snacks/new.html.erb within layouts/application (96.8ms)
+Completed 200 OK in 496ms (Views: 441.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/snacks" for ::1 at 2019-06-12 10:13:25 -0400
+Processing by SnacksController#index as HTML
+  Rendering snacks/index.html.erb within layouts/application
+  [1m[36mSnack Load (9.1ms)[0m  [1m[34mSELECT "snacks".* FROM "snacks"[0m
+  ↳ app/views/snacks/index.html.erb:5
+  Rendered snacks/index.html.erb within layouts/application (58.3ms)
+Completed 200 OK in 533ms (Views: 494.8ms | ActiveRecord: 9.1ms)
+
+
+Started GET "/snacks/new" for ::1 at 2019-06-12 10:13:28 -0400
+Processing by SnacksController#new as HTML
+  Rendering snacks/new.html.erb within layouts/application
+  [1m[36mRetailer Load (1.0ms)[0m  [1m[34mSELECT "retailers".* FROM "retailers"[0m
+  ↳ app/views/snacks/_snack_form.html.erb:9
+  Rendered snacks/_snack_form.html.erb (80.1ms)
+  Rendered snacks/new.html.erb within layouts/application (86.0ms)
+Completed 200 OK in 459ms (Views: 440.3ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/snacks" for ::1 at 2019-06-12 10:13:29 -0400
+Processing by SnacksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+v4dZis4Nb7nXuJrwWGsyMU8Pqv1FBKuDIuNK82b7VCf0IhAnVmI0plO0NfQ2a22AGRds0I+RpWvDJcbhDBzOA==", "snack"=>{"name"=>"", "calories"=>"", "deliciousness"=>"1", "retailer_id"=>""}, "commit"=>"Make a new snack"}
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/snacks_controller.rb:28
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/snacks_controller.rb:28
+  Rendering snacks/new.html.erb within layouts/application
+  [1m[36mRetailer Load (1.3ms)[0m  [1m[34mSELECT "retailers".* FROM "retailers"[0m
+  ↳ app/views/snacks/_snack_form.html.erb:9
+  Rendered snacks/_snack_form.html.erb (87.2ms)
+  Rendered snacks/new.html.erb within layouts/application (96.3ms)
+Completed 200 OK in 512ms (Views: 453.8ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/snacks" for ::1 at 2019-06-12 10:14:06 -0400
+Processing by SnacksController#index as HTML
+  Rendering snacks/index.html.erb within layouts/application
+  [1m[36mSnack Load (1.2ms)[0m  [1m[34mSELECT "snacks".* FROM "snacks"[0m
+  ↳ app/views/snacks/index.html.erb:5
+  Rendered snacks/index.html.erb within layouts/application (59.4ms)
+Completed 200 OK in 521ms (Views: 502.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/snacks/new" for ::1 at 2019-06-12 10:14:08 -0400
+Processing by SnacksController#new as HTML
+  Rendering snacks/new.html.erb within layouts/application
+  [1m[36mRetailer Load (1.0ms)[0m  [1m[34mSELECT "retailers".* FROM "retailers"[0m
+  ↳ app/views/snacks/_snack_form.html.erb:9
+  Rendered snacks/_snack_form.html.erb (74.1ms)
+  Rendered snacks/new.html.erb within layouts/application (80.4ms)
+Completed 200 OK in 433ms (Views: 422.8ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/snacks" for ::1 at 2019-06-12 10:14:10 -0400
+Processing by SnacksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5CqgNsY497hseypLPxoyq2szY/YkQ2MotQq444foVQ6BBDUQcFlK1BJrGPcuojPVrmsA7pNpNxMWjaLTzkPLZg==", "snack"=>{"name"=>"", "calories"=>"", "deliciousness"=>"1", "retailer_id"=>""}, "commit"=>"Make a new snack"}
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/snacks_controller.rb:28
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/snacks_controller.rb:28
+  Rendering snacks/new.html.erb within layouts/application
+  [1m[36mRetailer Load (1.5ms)[0m  [1m[34mSELECT "retailers".* FROM "retailers"[0m
+  ↳ app/views/snacks/_snack_form.html.erb:9
+  Rendered snacks/_snack_form.html.erb (101.2ms)
+  Rendered snacks/new.html.erb within layouts/application (112.0ms)
+Completed 200 OK in 524ms (Views: 460.9ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/snacks" for ::1 at 2019-06-12 10:14:46 -0400
+Processing by SnacksController#index as HTML
+  Rendering snacks/index.html.erb within layouts/application
+  [1m[36mSnack Load (13.2ms)[0m  [1m[34mSELECT "snacks".* FROM "snacks"[0m
+  ↳ app/views/snacks/index.html.erb:5
+  Rendered snacks/index.html.erb within layouts/application (82.3ms)
+Completed 200 OK in 583ms (Views: 561.5ms | ActiveRecord: 13.2ms)
+
+
+Started GET "/snacks/new" for ::1 at 2019-06-12 10:14:49 -0400
+Processing by SnacksController#new as HTML
+  Rendering snacks/new.html.erb within layouts/application
+  [1m[36mRetailer Load (1.4ms)[0m  [1m[34mSELECT "retailers".* FROM "retailers"[0m
+  ↳ app/views/snacks/_snack_form.html.erb:9
+  Rendered snacks/_snack_form.html.erb (69.9ms)
+  Rendered snacks/new.html.erb within layouts/application (82.1ms)
+Completed 200 OK in 484ms (Views: 465.1ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/snacks" for ::1 at 2019-06-12 10:14:50 -0400
+Processing by SnacksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Qdj+ce9ie+emvmD72omx6kL0WpEuQwggbieyUHJ5Mggk9mtXWQPGi9iuUkfLMbCUh6w5iZlpXBvNoKhgO9KsYA==", "snack"=>{"name"=>"", "calories"=>"", "deliciousness"=>"1", "retailer_id"=>""}, "commit"=>"Make a new snack"}
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/snacks_controller.rb:28
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/snacks_controller.rb:28
+  Rendering snacks/new.html.erb within layouts/application
+  [1m[36mRetailer Load (0.9ms)[0m  [1m[34mSELECT "retailers".* FROM "retailers"[0m
+  ↳ app/views/snacks/_snack_form.html.erb:9
+  Rendered snacks/_snack_form.html.erb (101.2ms)
+  Rendered snacks/new.html.erb within layouts/application (114.3ms)
+Completed 200 OK in 565ms (Views: 507.3ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/snacks" for ::1 at 2019-06-12 10:15:08 -0400
+Processing by SnacksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1P4iS5pcFMmXRrLVsrbX+66V6oGkTgy2z5fUjgwAaB7xBW/N/YMl0QT3tmmvKtKyh5utjjLAZxJZjZv9bPkGyg==", "snack"=>{"name"=>"Cardboard", "calories"=>"200", "deliciousness"=>"5", "retailer_id"=>""}, "commit"=>"Create Snack"}
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/snacks_controller.rb:28
+  [1m[36mSnack Create (1.1ms)[0m  [1m[32mINSERT INTO "snacks" ("name", "calories", "deliciousness", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cardboard"], ["calories", 200], ["deliciousness", 5], ["created_at", "2019-06-12 14:15:08.898090"], ["updated_at", "2019-06-12 14:15:08.898090"]]
+  ↳ app/controllers/snacks_controller.rb:28
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/snacks_controller.rb:28
+  Rendering snacks/new.html.erb within layouts/application
+  [1m[36mRetailer Load (1.0ms)[0m  [1m[34mSELECT "retailers".* FROM "retailers"[0m
+  ↳ app/views/snacks/_snack_form.html.erb:9
+  Rendered snacks/_snack_form.html.erb (92.9ms)
+  Rendered snacks/new.html.erb within layouts/application (99.8ms)
+Completed 200 OK in 659ms (Views: 595.2ms | ActiveRecord: 7.0ms)
+
+
+Started PATCH "/snacks/13" for ::1 at 2019-06-12 10:15:23 -0400
+Processing by SnacksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VIv/qtw2488fjPr/iy+TnBmiS+PRjYhSG8pQn23d9fhxcLIsu+nS14w9/kOWs5bVMKwM7EcD4/aN0B/sDSSbLA==", "snack"=>{"name"=>"Cardboard", "calories"=>"200", "deliciousness"=>"5", "retailer_id"=>"4"}, "commit"=>"Update Snack", "id"=>"13"}
+  [1m[36mSnack Load (2.6ms)[0m  [1m[34mSELECT  "snacks".* FROM "snacks" WHERE "snacks"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/snacks_controller.rb:53
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/snacks_controller.rb:41
+  [1m[36mSnack Update (1.3ms)[0m  [1m[33mUPDATE "snacks" SET "retailer_id" = ?, "updated_at" = ? WHERE "snacks"."id" = ?[0m  [["retailer_id", 4], ["updated_at", "2019-06-12 14:15:23.437822"], ["id", 13]]
+  ↳ app/controllers/snacks_controller.rb:41
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/snacks_controller.rb:41
+Redirected to http://localhost:3000/snacks/13
+Completed 302 Found in 123ms (ActiveRecord: 6.0ms)
+
+
+Started GET "/snacks/13" for ::1 at 2019-06-12 10:15:23 -0400
+Processing by SnacksController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mSnack Load (0.9ms)[0m  [1m[34mSELECT  "snacks".* FROM "snacks" WHERE "snacks"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/snacks_controller.rb:53
+  Rendering snacks/show.html.erb within layouts/application
+  [1m[36mRetailer Load (1.3ms)[0m  [1m[34mSELECT  "retailers".* FROM "retailers" WHERE "retailers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/snacks/show.html.erb:2
+  Rendered snacks/show.html.erb within layouts/application (81.4ms)
+Completed 200 OK in 563ms (Views: 505.1ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/snacks" for ::1 at 2019-06-12 10:16:24 -0400
+Processing by SnacksController#index as HTML
+  Rendering snacks/index.html.erb within layouts/application
+  [1m[36mSnack Load (1.7ms)[0m  [1m[34mSELECT "snacks".* FROM "snacks"[0m
+  ↳ app/views/snacks/index.html.erb:5
+  Rendered snacks/index.html.erb within layouts/application (186.9ms)
+Completed 200 OK in 646ms (Views: 595.8ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/snacks/new" for ::1 at 2019-06-12 10:16:28 -0400
+Processing by SnacksController#new as HTML
+  Rendering snacks/new.html.erb within layouts/application
+  [1m[36mRetailer Load (1.7ms)[0m  [1m[34mSELECT "retailers".* FROM "retailers"[0m
+  ↳ app/views/snacks/_snack_form.html.erb:9
+  Rendered snacks/_snack_form.html.erb (184.3ms)
+  Rendered snacks/new.html.erb within layouts/application (197.7ms)
+Completed 200 OK in 571ms (Views: 548.0ms | ActiveRecord: 12.5ms)
+
+
+Started POST "/snacks" for ::1 at 2019-06-12 10:16:35 -0400
+Processing by SnacksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jjmGBzgaAQzlouXX5tBcnqzio6Qa1JPoNolrVHyFCPjrFxMhjnu8YJuy12v3aF3gabrAvK3+x9OVDnFkNS6WkA==", "snack"=>{"name"=>"Ho-Hos", "calories"=>"1", "deliciousness"=>"1", "retailer_id"=>"2"}, "commit"=>"Make a new snack"}
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/snacks_controller.rb:28
+  [1m[36mSnack Create (1.6ms)[0m  [1m[32mINSERT INTO "snacks" ("name", "calories", "deliciousness", "created_at", "updated_at", "retailer_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Ho-Hos"], ["calories", 1], ["deliciousness", 1], ["created_at", "2019-06-12 14:16:35.829113"], ["updated_at", "2019-06-12 14:16:35.829113"], ["retailer_id", 2]]
+  ↳ app/controllers/snacks_controller.rb:28
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/snacks_controller.rb:28
+  Rendering snacks/new.html.erb within layouts/application
+  [1m[36mRetailer Load (8.0ms)[0m  [1m[34mSELECT "retailers".* FROM "retailers"[0m
+  ↳ app/views/snacks/_snack_form.html.erb:9
+  Rendered snacks/_snack_form.html.erb (115.0ms)
+  Rendered snacks/new.html.erb within layouts/application (146.6ms)
+Completed 200 OK in 671ms (Views: 586.5ms | ActiveRecord: 13.0ms)
+
+
+Started GET "/snacks/new" for ::1 at 2019-06-12 10:17:05 -0400
+Processing by SnacksController#new as HTML
+  Rendering snacks/new.html.erb within layouts/application
+  [1m[36mRetailer Load (1.5ms)[0m  [1m[34mSELECT "retailers".* FROM "retailers"[0m
+  ↳ app/views/snacks/_snack_form.html.erb:9
+  Rendered snacks/_snack_form.html.erb (210.4ms)
+  Rendered snacks/new.html.erb within layouts/application (224.7ms)
+Completed 200 OK in 824ms (Views: 648.8ms | ActiveRecord: 14.1ms)
+
+
+Started POST "/snacks" for ::1 at 2019-06-12 10:17:11 -0400
+Processing by SnacksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ihKYxpYfcPC2GwqehSNz8+UXxrqtlPNaftdufegOH4qv6dVA8cBB6CWqDiKYv3a6zBmBtTsamP7ozSEOiPdxXg==", "snack"=>{"name"=>"Twinkies", "calories"=>"2", "deliciousness"=>"1", "retailer_id"=>""}, "commit"=>"Make a new snack"}
+  Rendering snacks/new.html.erb within layouts/application
+  [1m[36mRetailer Load (2.1ms)[0m  [1m[34mSELECT "retailers".* FROM "retailers"[0m
+  ↳ app/views/snacks/_snack_form.html.erb:9
+  Rendered snacks/_snack_form.html.erb (99.3ms)
+  Rendered snacks/new.html.erb within layouts/application (122.3ms)
+Completed 200 OK in 553ms (Views: 528.3ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/snacks" for ::1 at 2019-06-12 10:17:25 -0400
+Processing by SnacksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"knADnWiI3BICFCPf4eSXJevQNlz5JLzQAhXeYZnDYza3i04bD1ftCpGlJ2P8eJJswt5xU2+q13SUD5ES+ToN4g==", "snack"=>{"name"=>"Twinkies27", "calories"=>"2", "deliciousness"=>"1", "retailer_id"=>""}, "commit"=>"Create Snack"}
+  Rendering snacks/new.html.erb within layouts/application
+  [1m[36mRetailer Load (1.9ms)[0m  [1m[34mSELECT "retailers".* FROM "retailers"[0m
+  ↳ app/views/snacks/_snack_form.html.erb:9
+  Rendered snacks/_snack_form.html.erb (103.8ms)
+  Rendered snacks/new.html.erb within layouts/application (109.7ms)
+Completed 200 OK in 589ms (Views: 557.5ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/snacks" for ::1 at 2019-06-12 10:17:30 -0400
+Processing by SnacksController#index as HTML
+  Rendering snacks/index.html.erb within layouts/application
+  [1m[36mSnack Load (8.4ms)[0m  [1m[34mSELECT "snacks".* FROM "snacks"[0m
+  ↳ app/views/snacks/index.html.erb:5
+  Rendered snacks/index.html.erb within layouts/application (65.7ms)
+Completed 200 OK in 506ms (Views: 471.2ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/snacks/new" for ::1 at 2019-06-12 10:17:33 -0400
+Processing by SnacksController#new as HTML
+  Rendering snacks/new.html.erb within layouts/application
+  [1m[36mRetailer Load (1.0ms)[0m  [1m[34mSELECT "retailers".* FROM "retailers"[0m
+  ↳ app/views/snacks/_snack_form.html.erb:9
+  Rendered snacks/_snack_form.html.erb (79.0ms)
+  Rendered snacks/new.html.erb within layouts/application (93.1ms)
+Completed 200 OK in 548ms (Views: 530.7ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/snacks" for ::1 at 2019-06-12 10:17:39 -0400
+Processing by SnacksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KTlM4est0NcLsX/JNPefbtKiryF+taDouQIOOrTBeX1MF9nHXUxtu3WhTXUlT54QF/rMOcmf9NMahRQK/WrnFQ==", "snack"=>{"name"=>"Twinkies", "calories"=>"300", "deliciousness"=>"1", "retailer_id"=>"3"}, "commit"=>"Make a new snack"}
+  Rendering snacks/new.html.erb within layouts/application
+  [1m[36mRetailer Load (1.0ms)[0m  [1m[34mSELECT "retailers".* FROM "retailers"[0m
+  ↳ app/views/snacks/_snack_form.html.erb:9
+  Rendered snacks/_snack_form.html.erb (98.4ms)
+  Rendered snacks/new.html.erb within layouts/application (105.7ms)
+Completed 200 OK in 565ms (Views: 534.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/snacks" for ::1 at 2019-06-12 10:18:13 -0400
+Processing by SnacksController#index as HTML
+  Rendering snacks/index.html.erb within layouts/application
+  [1m[36mSnack Load (1.5ms)[0m  [1m[34mSELECT "snacks".* FROM "snacks"[0m
+  ↳ app/views/snacks/index.html.erb:5
+  Rendered snacks/index.html.erb within layouts/application (200.1ms)
+Completed 200 OK in 676ms (Views: 621.2ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/snacks/new" for ::1 at 2019-06-12 10:18:17 -0400
+Processing by SnacksController#new as HTML
+  Rendering snacks/new.html.erb within layouts/application
+  [1m[36mRetailer Load (1.3ms)[0m  [1m[34mSELECT "retailers".* FROM "retailers"[0m
+  ↳ app/views/snacks/_snack_form.html.erb:9
+  Rendered snacks/_snack_form.html.erb (219.6ms)
+  Rendered snacks/new.html.erb within layouts/application (226.8ms)
+Completed 200 OK in 642ms (Views: 617.0ms | ActiveRecord: 8.0ms)
+
+
+Started POST "/snacks" for ::1 at 2019-06-12 10:18:21 -0400
+Processing by SnacksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9d/5qWBXHe014zISsGv7ShTxfY2emlnC1O8r7BUAc2KQ8WyP1jaggUvzAK6h0/o00akelSmwDfl3aDHcXKvtCg==", "snack"=>{"name"=>"Ho-Hos", "calories"=>"5", "deliciousness"=>"1", "retailer_id"=>""}, "commit"=>"Make a new snack"}
+Completed 500 Internal Server Error in 110541ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/snacks_controller.rb:30:in `create'
+Started GET "/snacks/new" for ::1 at 2019-06-12 10:20:17 -0400
+Processing by SnacksController#new as HTML
+  Rendering snacks/new.html.erb within layouts/application
+  [1m[36mRetailer Load (2.2ms)[0m  [1m[34mSELECT "retailers".* FROM "retailers"[0m
+  ↳ app/views/snacks/_snack_form.html.erb:9
+  Rendered snacks/_snack_form.html.erb (197.8ms)
+  Rendered snacks/new.html.erb within layouts/application (211.9ms)
+Completed 200 OK in 775ms (Views: 596.9ms | ActiveRecord: 15.9ms)
+
+
+Started POST "/snacks" for ::1 at 2019-06-12 10:20:24 -0400
+Processing by SnacksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v3IaxmVVlMNSYtk4O08AFxn4UtfObeIIpNPHr3BuFLuaiVdAAoql28HT3YQm0wVeMPYV2FjjiawyyYjcEJd6bw==", "snack"=>{"name"=>"", "calories"=>"", "deliciousness"=>"1", "retailer_id"=>""}, "commit"=>"Make a new snack"}
+  Rendering snacks/new.html.erb within layouts/application
+  [1m[36mRetailer Load (1.0ms)[0m  [1m[34mSELECT "retailers".* FROM "retailers"[0m
+  ↳ app/views/snacks/_snack_form.html.erb:9
+  Rendered snacks/_snack_form.html.erb (88.5ms)
+  Rendered snacks/new.html.erb within layouts/application (115.8ms)
+Completed 200 OK in 532ms (Views: 491.6ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/snacks" for ::1 at 2019-06-12 10:20:29 -0400
+Processing by SnacksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UwgTuItkh0it1LCoVQTGiSj/SclqCAyimaernkMmjl92814+7Lu2UD5ltBRImMPAAfEOxvyGZwYPveTtI9/giw==", "snack"=>{"name"=>"Twinkies", "calories"=>"200", "deliciousness"=>"1", "retailer_id"=>""}, "commit"=>"Create Snack"}
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/snacks_controller.rb:30
+  [1m[36mSnack Create (1.6ms)[0m  [1m[32mINSERT INTO "snacks" ("name", "calories", "deliciousness", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Twinkies"], ["calories", 200], ["deliciousness", 1], ["created_at", "2019-06-12 14:20:29.502637"], ["updated_at", "2019-06-12 14:20:29.502637"]]
+  ↳ app/controllers/snacks_controller.rb:30
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/snacks_controller.rb:30
+Redirected to http://localhost:3000/snacks/15
+Completed 302 Found in 79ms (ActiveRecord: 5.0ms)
+
+
+Started GET "/snacks/15" for ::1 at 2019-06-12 10:20:29 -0400
+Processing by SnacksController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mSnack Load (2.2ms)[0m  [1m[34mSELECT  "snacks".* FROM "snacks" WHERE "snacks"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/snacks_controller.rb:54
+  Rendering snacks/show.html.erb within layouts/application
+  Rendered snacks/show.html.erb within layouts/application (22.9ms)
+Completed 200 OK in 523ms (Views: 452.5ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/snacks" for ::1 at 2019-06-12 10:21:30 -0400
+Processing by SnacksController#index as HTML
+  Rendering snacks/index.html.erb within layouts/application
+  [1m[36mSnack Load (1.9ms)[0m  [1m[34mSELECT "snacks".* FROM "snacks"[0m
+  ↳ app/views/snacks/index.html.erb:5
+  Rendered snacks/index.html.erb within layouts/application (191.9ms)
+Completed 200 OK in 618ms (Views: 574.9ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/snacks/new" for ::1 at 2019-06-12 10:21:33 -0400
+Processing by SnacksController#new as HTML
+  Rendering snacks/new.html.erb within layouts/application
+  [1m[36mRetailer Load (1.4ms)[0m  [1m[34mSELECT "retailers".* FROM "retailers"[0m
+  ↳ app/views/snacks/_snack_form.html.erb:9
+  Rendered snacks/_snack_form.html.erb (173.9ms)
+  Rendered snacks/new.html.erb within layouts/application (185.6ms)
+Completed 200 OK in 566ms (Views: 549.1ms | ActiveRecord: 5.5ms)
+
+
+Started POST "/snacks" for ::1 at 2019-06-12 10:21:36 -0400
+Processing by SnacksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/sE40VoT2ZDz1uSquSVF9Ibtlh27+BgxmzvSS8WpYdCb76337HJk/I3G1haonUSKQ7X1BQzSTAo4vMh7jAL/uA==", "snack"=>{"name"=>"", "calories"=>"", "deliciousness"=>"1", "retailer_id"=>""}, "commit"=>"Make a new snack"}
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/snacks_controller.rb:28
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/snacks_controller.rb:28
+  Rendering snacks/new.html.erb within layouts/application
+  [1m[36mRetailer Load (1.3ms)[0m  [1m[34mSELECT "retailers".* FROM "retailers"[0m
+  ↳ app/views/snacks/_snack_form.html.erb:9
+  Rendered snacks/_snack_form.html.erb (87.6ms)
+  Rendered snacks/new.html.erb within layouts/application (106.7ms)
+Completed 200 OK in 553ms (Views: 469.0ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/snacks" for ::1 at 2019-06-12 10:21:41 -0400
+Processing by SnacksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/uBxvs0FGnVE6ZmjLAgm+izTtq9iUtkOFMLaklDgCLLbGzw4qtorbddYnR8xlCOzBd3xoPTcsqqC2JXhMBlmZg==", "snack"=>{"name"=>"Cardboard", "calories"=>"30", "deliciousness"=>"1", "retailer_id"=>""}, "commit"=>"Create Snack"}
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/snacks_controller.rb:28
+  [1m[36mSnack Create (1.3ms)[0m  [1m[32mINSERT INTO "snacks" ("name", "calories", "deliciousness", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cardboard"], ["calories", 30], ["deliciousness", 1], ["created_at", "2019-06-12 14:21:41.300621"], ["updated_at", "2019-06-12 14:21:41.300621"]]
+  ↳ app/controllers/snacks_controller.rb:28
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/snacks_controller.rb:28
+Redirected to http://localhost:3000/snacks/16
+Completed 302 Found in 106ms (ActiveRecord: 3.7ms)
+
+
+Started GET "/snacks/16" for ::1 at 2019-06-12 10:21:41 -0400
+Processing by SnacksController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mSnack Load (1.4ms)[0m  [1m[34mSELECT  "snacks".* FROM "snacks" WHERE "snacks"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/snacks_controller.rb:54
+  Rendering snacks/show.html.erb within layouts/application
+  Rendered snacks/show.html.erb within layouts/application (33.5ms)
+Completed 200 OK in 524ms (Views: 444.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/snacks" for ::1 at 2019-06-12 10:22:09 -0400
+Processing by SnacksController#index as HTML
+  Rendering snacks/index.html.erb within layouts/application
+  [1m[36mSnack Load (9.3ms)[0m  [1m[34mSELECT "snacks".* FROM "snacks"[0m
+  ↳ app/views/snacks/index.html.erb:5
+  Rendered snacks/index.html.erb within layouts/application (192.0ms)
+Completed 200 OK in 665ms (Views: 592.6ms | ActiveRecord: 16.1ms)
+
+
+Started GET "/snacks/new" for ::1 at 2019-06-12 10:22:13 -0400
+Processing by SnacksController#new as HTML
+  Rendering snacks/new.html.erb within layouts/application
+  [1m[36mRetailer Load (1.2ms)[0m  [1m[34mSELECT "retailers".* FROM "retailers"[0m
+  ↳ app/views/snacks/_snack_form.html.erb:9
+  Rendered snacks/_snack_form.html.erb (182.6ms)
+  Rendered snacks/new.html.erb within layouts/application (188.6ms)
+Completed 200 OK in 573ms (Views: 551.3ms | ActiveRecord: 5.6ms)
+
+
+Started POST "/snacks" for ::1 at 2019-06-12 10:22:39 -0400
+Processing by SnacksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UVoCtPwKxxqHNgq+yishIbbgN54ZTrHaUDz+1VqYZHE0dJeSSmt6dvkmOALbkyBfc7hUhq5k5eHzu+TlEzP6GQ==", "snack"=>{"name"=>"", "calories"=>"", "deliciousness"=>"1", "retailer_id"=>""}, "commit"=>"Make a new snack"}
+  Rendering snacks/new.html.erb within layouts/application
+  [1m[36mRetailer Load (1.1ms)[0m  [1m[34mSELECT "retailers".* FROM "retailers"[0m
+  ↳ app/views/snacks/_snack_form.html.erb:9
+  Rendered snacks/_snack_form.html.erb (92.6ms)
+  Rendered snacks/new.html.erb within layouts/application (111.2ms)
+Completed 200 OK in 544ms (Views: 493.7ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/snacks" for ::1 at 2019-06-12 10:22:47 -0400
+Processing by SnacksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"G1MHbv5qcvHbOsCZHeiiba1sTyO59oOXvgTkBkSrS6Y+qErombVD6UiLxCUAdKckhGIILC946DMoHqt1JFIlcg==", "snack"=>{"name"=>"", "calories"=>"50", "deliciousness"=>"1", "retailer_id"=>""}, "commit"=>"Create Snack"}
+  Rendering snacks/new.html.erb within layouts/application
+  [1m[36mRetailer Load (1.8ms)[0m  [1m[34mSELECT "retailers".* FROM "retailers"[0m
+  ↳ app/views/snacks/_snack_form.html.erb:9
+  Rendered snacks/_snack_form.html.erb (92.9ms)
+  Rendered snacks/new.html.erb within layouts/application (113.4ms)
+Completed 200 OK in 536ms (Views: 496.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/snacks/new" for ::1 at 2019-06-12 10:24:10 -0400
+Processing by SnacksController#new as HTML
+  Rendering snacks/new.html.erb within layouts/application
+  [1m[36mRetailer Load (1.5ms)[0m  [1m[34mSELECT "retailers".* FROM "retailers"[0m
+  ↳ app/views/snacks/_snack_form.html.erb:9
+  Rendered snacks/_snack_form.html.erb (214.3ms)
+  Rendered snacks/new.html.erb within layouts/application (228.0ms)
+Completed 200 OK in 817ms (Views: 631.7ms | ActiveRecord: 29.1ms)
+
+
+Started GET "/snacks" for ::1 at 2019-06-12 10:24:14 -0400
+Processing by SnacksController#index as HTML
+  Rendering snacks/index.html.erb within layouts/application
+  [1m[36mSnack Load (1.7ms)[0m  [1m[34mSELECT "snacks".* FROM "snacks"[0m
+  ↳ app/views/snacks/index.html.erb:5
+  Rendered snacks/index.html.erb within layouts/application (77.8ms)
+Completed 200 OK in 569ms (Views: 538.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/snacks/new" for ::1 at 2019-06-12 10:24:20 -0400
+Processing by SnacksController#new as HTML
+  Rendering snacks/new.html.erb within layouts/application
+  [1m[36mRetailer Load (1.0ms)[0m  [1m[34mSELECT "retailers".* FROM "retailers"[0m
+  ↳ app/views/snacks/_snack_form.html.erb:9
+  Rendered snacks/_snack_form.html.erb (86.4ms)
+  Rendered snacks/new.html.erb within layouts/application (94.2ms)
+Completed 200 OK in 573ms (Views: 553.1ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/snacks" for ::1 at 2019-06-12 10:24:26 -0400
+Processing by SnacksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ehuQGZ0R1KLxrgGuGjjpfn8LcrrF530ylc2/CwMV/Ohf4N2f+s7lumIfBRIHpOw3VgU1tVNpFpYD1/B4Y+ySPA==", "snack"=>{"name"=>"Dunkaroos", "calories"=>"509", "deliciousness"=>"1", "retailer_id"=>""}, "commit"=>"Make a new snack"}
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/snacks_controller.rb:30
+  [1m[36mSnack Create (1.4ms)[0m  [1m[32mINSERT INTO "snacks" ("name", "calories", "deliciousness", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Dunkaroos"], ["calories", 509], ["deliciousness", 1], ["created_at", "2019-06-12 14:24:26.180623"], ["updated_at", "2019-06-12 14:24:26.180623"]]
+  ↳ app/controllers/snacks_controller.rb:30
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/snacks_controller.rb:30
+Redirected to http://localhost:3000/snacks/17
+Completed 302 Found in 95ms (ActiveRecord: 4.9ms)
+
+
+Started GET "/snacks/17" for ::1 at 2019-06-12 10:24:26 -0400
+Processing by SnacksController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mSnack Load (1.3ms)[0m  [1m[34mSELECT  "snacks".* FROM "snacks" WHERE "snacks"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/snacks_controller.rb:54
+  Rendering snacks/show.html.erb within layouts/application
+  Rendered snacks/show.html.erb within layouts/application (35.0ms)
+Completed 200 OK in 612ms (Views: 563.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/snacks/new" for ::1 at 2019-06-12 10:24:41 -0400
+Processing by SnacksController#new as HTML
+  Rendering snacks/new.html.erb within layouts/application
+  [1m[36mRetailer Load (1.4ms)[0m  [1m[34mSELECT "retailers".* FROM "retailers"[0m
+  ↳ app/views/snacks/_snack_form.html.erb:9
+  Rendered snacks/_snack_form.html.erb (237.6ms)
+  Rendered snacks/new.html.erb within layouts/application (246.3ms)
+Completed 200 OK in 854ms (Views: 674.4ms | ActiveRecord: 26.7ms)
+
+
+Started POST "/snacks" for ::1 at 2019-06-12 10:24:51 -0400
+Processing by SnacksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iIu7gbmpKqTiIhIVF8YA73rSu7HB9Uw7PhShjp5U4uetcPYH3nYbvHGTFqkKWgWmU9z8vld7J5+oDu79/q2MMw==", "snack"=>{"name"=>"Dunkaroos", "calories"=>"50", "deliciousness"=>"1", "retailer_id"=>""}, "commit"=>"Make a new snack"}
+  [1m[36mSnack Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" WHERE "snacks"."name" = ? LIMIT ?[0m  [["name", "Dunkaroos"], ["LIMIT", 1]]
+  ↳ app/controllers/snacks_controller.rb:29
+  Rendering snacks/new.html.erb within layouts/application
+  [1m[36mRetailer Load (1.5ms)[0m  [1m[34mSELECT "retailers".* FROM "retailers"[0m
+  ↳ app/views/snacks/_snack_form.html.erb:9
+  Rendered snacks/_snack_form.html.erb (110.6ms)
+  Rendered snacks/new.html.erb within layouts/application (139.1ms)
+Completed 200 OK in 671ms (Views: 597.9ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/snacks" for ::1 at 2019-06-12 10:25:44 -0400
+Processing by SnacksController#index as HTML
+  Rendering snacks/index.html.erb within layouts/application
+  [1m[36mSnack Load (1.6ms)[0m  [1m[34mSELECT "snacks".* FROM "snacks"[0m
+  ↳ app/views/snacks/index.html.erb:5
+  Rendered snacks/index.html.erb within layouts/application (82.5ms)
+Completed 200 OK in 536ms (Views: 517.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/snacks/9" for ::1 at 2019-06-12 10:25:52 -0400
+Processing by SnacksController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mSnack Load (1.5ms)[0m  [1m[34mSELECT  "snacks".* FROM "snacks" WHERE "snacks"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/snacks_controller.rb:54
+  Rendering snacks/show.html.erb within layouts/application
+  [1m[36mRetailer Load (1.5ms)[0m  [1m[34mSELECT  "retailers".* FROM "retailers" WHERE "retailers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/snacks/show.html.erb:2
+  Rendered snacks/show.html.erb within layouts/application (83.8ms)
+Completed 200 OK in 569ms (Views: 527.4ms | ActiveRecord: 3.0ms)
+
+
+Started DELETE "/snacks/9" for ::1 at 2019-06-12 10:25:56 -0400
+Processing by SnacksController#destroy as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"N0PosS3nCbAe7BjztKox6SQuYSbG6cetfUmYKcw0+pwSuKU3Sjg4qI1dHE+pNjSgDSAmKVBnrAnrU9darM2USA==", "commit"=>"Delete", "id"=>"9"}
+  [1m[36mSnack Load (1.0ms)[0m  [1m[34mSELECT  "snacks".* FROM "snacks" WHERE "snacks"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/snacks_controller.rb:54
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/snacks_controller.rb:47
+  [1m[36mSnack Destroy (1.3ms)[0m  [1m[31mDELETE FROM "snacks" WHERE "snacks"."id" = ?[0m  [["id", 9]]
+  ↳ app/controllers/snacks_controller.rb:47
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/snacks_controller.rb:47
+Redirected to http://localhost:3000/snacks
+Completed 302 Found in 73ms (ActiveRecord: 5.5ms)
+
+
+Started GET "/snacks" for ::1 at 2019-06-12 10:25:56 -0400
+Processing by SnacksController#index as HTML
+  Rendering snacks/index.html.erb within layouts/application
+  [1m[36mSnack Load (1.6ms)[0m  [1m[34mSELECT "snacks".* FROM "snacks"[0m
+  ↳ app/views/snacks/index.html.erb:5
+  Rendered snacks/index.html.erb within layouts/application (81.0ms)
+Completed 200 OK in 627ms (Views: 607.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/snacks/1" for ::1 at 2019-06-12 10:26:22 -0400
+Processing by SnacksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSnack Load (7.0ms)[0m  [1m[34mSELECT  "snacks".* FROM "snacks" WHERE "snacks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/snacks_controller.rb:54
+  Rendering snacks/show.html.erb within layouts/application
+  [1m[36mRetailer Load (7.3ms)[0m  [1m[34mSELECT  "retailers".* FROM "retailers" WHERE "retailers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/snacks/show.html.erb:2
+  Rendered snacks/show.html.erb within layouts/application (45.4ms)
+Completed 200 OK in 521ms (Views: 489.0ms | ActiveRecord: 14.2ms)
+
+
+Started GET "/snacks/1/edit" for ::1 at 2019-06-12 10:26:24 -0400
+Processing by SnacksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSnack Load (1.0ms)[0m  [1m[34mSELECT  "snacks".* FROM "snacks" WHERE "snacks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/snacks_controller.rb:54
+  Rendering snacks/edit.html.erb within layouts/application
+  [1m[36mRetailer Load (1.2ms)[0m  [1m[34mSELECT "retailers".* FROM "retailers"[0m
+  ↳ app/views/snacks/_snack_form.html.erb:9
+  Rendered snacks/_snack_form.html.erb (91.6ms)
+  Rendered snacks/edit.html.erb within layouts/application (99.3ms)
+Completed 200 OK in 560ms (Views: 527.3ms | ActiveRecord: 2.1ms)
+
+
+Started PATCH "/snacks/1" for ::1 at 2019-06-12 10:26:28 -0400
+Processing by SnacksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"un1DFdyFCRBUIxY+y/CsI1WhTVM3J6cSQS/xnCwYWs53816jaEMSXRBeBMaMb/zQXDnBpzLMDEbdhteaIfrL0g==", "snack"=>{"name"=>"", "calories"=>"500", "deliciousness"=>"3", "retailer_id"=>"2"}, "commit"=>"Fix This Snack", "id"=>"1"}
+  [1m[36mSnack Load (1.2ms)[0m  [1m[34mSELECT  "snacks".* FROM "snacks" WHERE "snacks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/snacks_controller.rb:54
+  [1m[35m (0.7ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/snacks_controller.rb:42
+  [1m[36mSnack Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" WHERE "snacks"."name" = ? AND "snacks"."id" != ? LIMIT ?[0m  [["name", ""], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/snacks_controller.rb:42
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/snacks_controller.rb:42
+Redirected to http://localhost:3000/snacks/1
+Completed 302 Found in 139ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/snacks/1" for ::1 at 2019-06-12 10:26:28 -0400
+Processing by SnacksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSnack Load (2.6ms)[0m  [1m[34mSELECT  "snacks".* FROM "snacks" WHERE "snacks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/snacks_controller.rb:54
+  Rendering snacks/show.html.erb within layouts/application
+  [1m[36mRetailer Load (1.0ms)[0m  [1m[34mSELECT  "retailers".* FROM "retailers" WHERE "retailers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/snacks/show.html.erb:2
+  Rendered snacks/show.html.erb within layouts/application (60.9ms)
+Completed 200 OK in 556ms (Views: 519.4ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/snacks/1/edit" for ::1 at 2019-06-12 10:27:34 -0400
+Processing by SnacksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSnack Load (1.3ms)[0m  [1m[34mSELECT  "snacks".* FROM "snacks" WHERE "snacks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/snacks_controller.rb:58
+  Rendering snacks/edit.html.erb within layouts/application
+  [1m[36mRetailer Load (1.3ms)[0m  [1m[34mSELECT "retailers".* FROM "retailers"[0m
+  ↳ app/views/snacks/_snack_form.html.erb:9
+  Rendered snacks/_snack_form.html.erb (222.1ms)
+  Rendered snacks/edit.html.erb within layouts/application (234.9ms)
+Completed 200 OK in 887ms (Views: 670.6ms | ActiveRecord: 22.4ms)
+
+
+Started PATCH "/snacks/1" for ::1 at 2019-06-12 10:27:40 -0400
+Processing by SnacksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4CDjIWdoNEKXOYHTPECUFijfgssHFXSVcp6rltEbsfotrv6X064vD9NEkyt738TlIUcOPwL+38HuN42Q3Pkg5g==", "snack"=>{"name"=>"", "calories"=>"500", "deliciousness"=>"3", "retailer_id"=>"2"}, "commit"=>"Fix This Snack", "id"=>"1"}
+  [1m[36mSnack Load (1.0ms)[0m  [1m[34mSELECT  "snacks".* FROM "snacks" WHERE "snacks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/snacks_controller.rb:58
+  [1m[36mSnack Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" WHERE "snacks"."name" = ? AND "snacks"."id" != ? LIMIT ?[0m  [["name", "Dunkaroos"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/snacks_controller.rb:42
+  Rendering snacks/edit.html.erb within layouts/application
+  [1m[36mRetailer Load (9.0ms)[0m  [1m[34mSELECT "retailers".* FROM "retailers"[0m
+  ↳ app/views/snacks/_snack_form.html.erb:9
+  Rendered snacks/_snack_form.html.erb (123.9ms)
+  Rendered snacks/edit.html.erb within layouts/application (139.4ms)
+Completed 200 OK in 732ms (Views: 637.6ms | ActiveRecord: 11.1ms)
+
+
+Started GET "/snacks/1" for ::1 at 2019-06-12 10:29:08 -0400
+Processing by SnacksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSnack Load (1.0ms)[0m  [1m[34mSELECT  "snacks".* FROM "snacks" WHERE "snacks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/snacks_controller.rb:58
+  Rendering snacks/show.html.erb within layouts/application
+  [1m[36mRetailer Load (1.2ms)[0m  [1m[34mSELECT  "retailers".* FROM "retailers" WHERE "retailers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/snacks/show.html.erb:2
+  Rendered snacks/show.html.erb within layouts/application (89.9ms)
+Completed 200 OK in 639ms (Views: 604.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/snacks/1/edit" for ::1 at 2019-06-12 10:29:11 -0400
+Processing by SnacksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSnack Load (1.1ms)[0m  [1m[34mSELECT  "snacks".* FROM "snacks" WHERE "snacks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/snacks_controller.rb:58
+  Rendering snacks/edit.html.erb within layouts/application
+  Rendered snacks/edit.html.erb within layouts/application (13.4ms)
+Completed 500 Internal Server Error in 62ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (Missing partial snacks/_error_list, application/_error_list with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/paul.nicholsen/Development/code/flatiron/batches/dc-web-051319/19-rails-validations/snack-tracker/app/views"
+):
+    1: <h1>Edit This Snack</h1>
+    2: 
+    3: <%= render "error_list" %>
+    4: 
+    5: <%= render "snack_form" %>
+  
+app/views/snacks/edit.html.erb:3:in `_app_views_snacks_edit_html_erb__1986139945320645024_70288611255800'
+Started GET "/snacks/1/edit" for ::1 at 2019-06-12 10:29:33 -0400
+Processing by SnacksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSnack Load (1.5ms)[0m  [1m[34mSELECT  "snacks".* FROM "snacks" WHERE "snacks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/snacks_controller.rb:58
+  Rendering snacks/edit.html.erb within layouts/application
+  Rendered snacks/edit.html.erb within layouts/application (16.6ms)
+Completed 500 Internal Server Error in 72ms (ActiveRecord: 1.5ms)
+
+
+  
+ActionView::Template::Error (Missing partial snacks/_error_list, application/_error_list with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/paul.nicholsen/Development/code/flatiron/batches/dc-web-051319/19-rails-validations/snack-tracker/app/views"
+):
+    1: <h1>Edit This Snack</h1>
+    2: 
+    3: <%= render "error_list" %>
+    4: <%= render "shared/snack_form" %>
+  
+app/views/snacks/edit.html.erb:3:in `_app_views_snacks_edit_html_erb__1986139945320645024_70288655070440'
+Started GET "/snacks/1/edit" for ::1 at 2019-06-12 10:30:06 -0400
+Processing by SnacksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSnack Load (1.2ms)[0m  [1m[34mSELECT  "snacks".* FROM "snacks" WHERE "snacks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/snacks_controller.rb:58
+  Rendering snacks/edit.html.erb within layouts/application
+  Rendered snacks/edit.html.erb within layouts/application (14.1ms)
+Completed 500 Internal Server Error in 70ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (Missing partial snacks/_error_list, application/_error_list with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/paul.nicholsen/Development/code/flatiron/batches/dc-web-051319/19-rails-validations/snack-tracker/app/views"
+):
+    1: <h1>Edit This Snack</h1>
+    2: 
+    3: <%= render "error_list" %>
+    4: 
+    5: <%= render "snack_form" %>
+  
+app/views/snacks/edit.html.erb:3:in `_app_views_snacks_edit_html_erb__1986139945320645024_70288615359740'
+Started GET "/snacks/1/edit" for ::1 at 2019-06-12 10:30:15 -0400
+Processing by SnacksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSnack Load (1.5ms)[0m  [1m[34mSELECT  "snacks".* FROM "snacks" WHERE "snacks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/snacks_controller.rb:58
+  Rendering snacks/edit.html.erb within layouts/application
+  Rendered shared/_error_list.html.erb (3.2ms)
+  [1m[36mRetailer Load (1.4ms)[0m  [1m[34mSELECT "retailers".* FROM "retailers"[0m
+  ↳ app/views/snacks/_snack_form.html.erb:9
+  Rendered snacks/_snack_form.html.erb (117.2ms)
+  Rendered snacks/edit.html.erb within layouts/application (145.7ms)
+Completed 200 OK in 716ms (Views: 679.8ms | ActiveRecord: 2.9ms)
+
+
+Started PATCH "/snacks/1" for ::1 at 2019-06-12 10:30:26 -0400
+Processing by SnacksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"70mxzC2AhNzTBWzUYCcfNNo/AaYOI48MzqTl3xuLPmDKsvxKSl+1xEC0aGh9uxp98zFGqZit5KhYvqqse3JQtA==", "snack"=>{"name"=>"", "calories"=>"500", "deliciousness"=>"3", "retailer_id"=>"2"}, "commit"=>"Fix This Snack", "id"=>"1"}
+  [1m[36mSnack Load (1.1ms)[0m  [1m[34mSELECT  "snacks".* FROM "snacks" WHERE "snacks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/snacks_controller.rb:58
+  [1m[36mSnack Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" WHERE "snacks"."name" = ? AND "snacks"."id" != ? LIMIT ?[0m  [["name", "Dunkaroos"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/snacks_controller.rb:42
+  Rendering snacks/edit.html.erb within layouts/application
+  Rendered shared/_error_list.html.erb (12.6ms)
+  [1m[36mRetailer Load (1.1ms)[0m  [1m[34mSELECT "retailers".* FROM "retailers"[0m
+  ↳ app/views/snacks/_snack_form.html.erb:9
+  Rendered snacks/_snack_form.html.erb (123.8ms)
+  Rendered snacks/edit.html.erb within layouts/application (155.2ms)
+Completed 200 OK in 719ms (Views: 636.2ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/snacks/1" for ::1 at 2019-06-12 10:30:52 -0400
+Processing by SnacksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSnack Load (1.0ms)[0m  [1m[34mSELECT  "snacks".* FROM "snacks" WHERE "snacks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/snacks_controller.rb:58
+  Rendering snacks/show.html.erb within layouts/application
+  [1m[36mRetailer Load (0.9ms)[0m  [1m[34mSELECT  "retailers".* FROM "retailers" WHERE "retailers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/snacks/show.html.erb:2
+  Rendered snacks/show.html.erb within layouts/application (50.5ms)
+Completed 200 OK in 559ms (Views: 527.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/snacks/1" for ::1 at 2019-06-12 10:30:54 -0400
+Processing by SnacksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSnack Load (1.0ms)[0m  [1m[34mSELECT  "snacks".* FROM "snacks" WHERE "snacks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/snacks_controller.rb:58
+  Rendering snacks/show.html.erb within layouts/application
+  [1m[36mRetailer Load (1.5ms)[0m  [1m[34mSELECT  "retailers".* FROM "retailers" WHERE "retailers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/snacks/show.html.erb:2
+  Rendered snacks/show.html.erb within layouts/application (86.6ms)
+Completed 200 OK in 623ms (Views: 589.2ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/snacks" for ::1 at 2019-06-12 10:30:56 -0400
+Processing by SnacksController#index as HTML
+  Rendering snacks/index.html.erb within layouts/application
+  [1m[36mSnack Load (1.6ms)[0m  [1m[34mSELECT "snacks".* FROM "snacks"[0m
+  ↳ app/views/snacks/index.html.erb:5
+  Rendered snacks/index.html.erb within layouts/application (91.1ms)
+Completed 200 OK in 620ms (Views: 594.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/retailers/new" for ::1 at 2019-06-12 10:36:26 -0400
+Processing by RetailersController#new as HTML
+  Rendering retailers/new.html.erb within layouts/application
+  Rendered retailers/new.html.erb within layouts/application (188.3ms)
+Completed 200 OK in 927ms (Views: 575.2ms | ActiveRecord: 23.7ms)
+
+
+Started POST "/retailers" for ::1 at 2019-06-12 10:36:55 -0400
+Processing by RetailersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9WOIwyI0e8X9xsQy1TlNnDAOl8ll4sBalw0XnWuYn+vQmMVFRetK3W53wI7IpUjVGQDQxvNsq/4BF1juC2HxPw==", "retailer"=>{"name"=>"Nabisco27", "year_established"=>"2050", "snacks_attributes"=>{"0"=>{"name"=>"", "calories"=>"", "deliciousness"=>"1"}, "1"=>{"name"=>"", "calories"=>"", "deliciousness"=>"1"}, "2"=>{"name"=>"", "calories"=>"", "deliciousness"=>"1"}}}, "commit"=>"Create Retailer"}
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/retailers_controller.rb:16
+  [1m[36mSnack Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" WHERE "snacks"."name" = ? LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/controllers/retailers_controller.rb:16
+  [1m[36mCACHE Snack Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" WHERE "snacks"."name" = ? LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/controllers/retailers_controller.rb:16
+  [1m[36mCACHE Snack Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" WHERE "snacks"."name" = ? LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/controllers/retailers_controller.rb:16
+  [1m[36mRetailer Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "retailers" WHERE "retailers"."name" = ? LIMIT ?[0m  [["name", "Nabisco27"], ["LIMIT", 1]]
+  ↳ app/controllers/retailers_controller.rb:16
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/retailers_controller.rb:16
+Completed 500 Internal Server Error in 42772ms (ActiveRecord: 17.2ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/retailers_controller.rb:18:in `create'
+Started GET "/retailers/new" for ::1 at 2019-06-12 10:39:47 -0400
+Processing by RetailersController#new as HTML
+  Rendering retailers/new.html.erb within layouts/application
+  Rendered shared/_error_list.html.erb (5.3ms)
+  Rendered retailers/new.html.erb within layouts/application (242.7ms)
+Completed 200 OK in 1229ms (Views: 832.8ms | ActiveRecord: 13.8ms)
+
+
+Started POST "/retailers" for ::1 at 2019-06-12 10:39:58 -0400
+Processing by RetailersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9X5elvRYqwieIaMFrINTO1Lc9+MsdH+WKR3f/XMC6CrQhRMQk4eaEA2Qp7mxH1Zye9Kw7Lr6FDK/B5COE/uG/g==", "retailer"=>{"name"=>"Nabisco42", "year_established"=>"2050", "snacks_attributes"=>{"0"=>{"name"=>"", "calories"=>"", "deliciousness"=>"1"}, "1"=>{"name"=>"", "calories"=>"", "deliciousness"=>"1"}, "2"=>{"name"=>"", "calories"=>"", "deliciousness"=>"1"}}}, "commit"=>"Create Retailer"}
+  [1m[36mSnack Exists (8.4ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" WHERE "snacks"."name" = ? LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/controllers/retailers_controller.rb:17
+  [1m[36mCACHE Snack Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" WHERE "snacks"."name" = ? LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/controllers/retailers_controller.rb:17
+  [1m[36mCACHE Snack Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" WHERE "snacks"."name" = ? LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/controllers/retailers_controller.rb:17
+  [1m[36mRetailer Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "retailers" WHERE "retailers"."name" = ? LIMIT ?[0m  [["name", "Nabisco42"], ["LIMIT", 1]]
+  ↳ app/controllers/retailers_controller.rb:17
+  Rendering retailers/new.html.erb within layouts/application
+  Rendered shared/_error_list.html.erb (38.2ms)
+  Rendered retailers/new.html.erb within layouts/application (514.6ms)
+Completed 200 OK in 1322ms (Views: 956.9ms | ActiveRecord: 10.0ms)
+
+
+Started POST "/retailers" for ::1 at 2019-06-12 10:42:05 -0400
+Processing by RetailersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xVPeg9gqhz6YI5u16JSzv8z4mbkZWEVlUmEPMAY8k0PgqJMFv/W2JguSnwn1CLb25fbeto/WLsHEe0BDZsX9lw==", "retailer"=>{"name"=>"Nabisco42", "year_established"=>"2000", "snacks_attributes"=>{"0"=>{"name"=>"", "calories"=>"", "deliciousness"=>"1"}, "1"=>{"name"=>"", "calories"=>"", "deliciousness"=>"1"}, "2"=>{"name"=>"", "calories"=>"", "deliciousness"=>"1"}, "3"=>{"name"=>"", "calories"=>"", "deliciousness"=>"1"}, "4"=>{"name"=>"", "calories"=>"", "deliciousness"=>"1"}, "5"=>{"name"=>"", "calories"=>"", "deliciousness"=>"1"}, "6"=>{"name"=>"", "calories"=>"", "deliciousness"=>"1"}, "7"=>{"name"=>"", "calories"=>"", "deliciousness"=>"1"}, "8"=>{"name"=>"", "calories"=>"", "deliciousness"=>"1"}}}, "commit"=>"Create Retailer"}
+  [1m[36mSnack Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" WHERE "snacks"."name" = ? LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/controllers/retailers_controller.rb:17
+  [1m[36mCACHE Snack Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" WHERE "snacks"."name" = ? LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/controllers/retailers_controller.rb:17
+  [1m[36mCACHE Snack Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" WHERE "snacks"."name" = ? LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/controllers/retailers_controller.rb:17
+  [1m[36mCACHE Snack Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" WHERE "snacks"."name" = ? LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/controllers/retailers_controller.rb:17
+  [1m[36mCACHE Snack Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" WHERE "snacks"."name" = ? LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/controllers/retailers_controller.rb:17
+  [1m[36mCACHE Snack Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" WHERE "snacks"."name" = ? LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/controllers/retailers_controller.rb:17
+  [1m[36mCACHE Snack Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" WHERE "snacks"."name" = ? LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/controllers/retailers_controller.rb:17
+  [1m[36mCACHE Snack Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" WHERE "snacks"."name" = ? LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/controllers/retailers_controller.rb:17
+  [1m[36mCACHE Snack Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" WHERE "snacks"."name" = ? LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/controllers/retailers_controller.rb:17
+  [1m[36mRetailer Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "retailers" WHERE "retailers"."name" = ? LIMIT ?[0m  [["name", "Nabisco42"], ["LIMIT", 1]]
+  ↳ app/controllers/retailers_controller.rb:17
+  Rendering retailers/new.html.erb within layouts/application
+  Rendered shared/_error_list.html.erb (33.5ms)
+  Rendered retailers/new.html.erb within layouts/application (1280.0ms)
+Completed 200 OK in 2863ms (Views: 1693.8ms | ActiveRecord: 23.1ms)
+
+
+Started GET "/retailers/new" for ::1 at 2019-06-12 10:42:23 -0400
+Processing by RetailersController#new as HTML
+  Rendering retailers/new.html.erb within layouts/application
+  Rendered shared/_error_list.html.erb (2.3ms)
+  Rendered retailers/new.html.erb within layouts/application (204.5ms)
+Completed 200 OK in 636ms (Views: 593.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/retailers/new" for ::1 at 2019-06-12 10:43:23 -0400
+Processing by RetailersController#new as HTML
+  Rendering retailers/new.html.erb within layouts/application
+  Rendered shared/_error_list.html.erb (2.9ms)
+  Rendered retailers/new.html.erb within layouts/application (210.8ms)
+Completed 200 OK in 992ms (Views: 646.8ms | ActiveRecord: 21.2ms)
+
+
+Started POST "/retailers" for ::1 at 2019-06-12 10:43:36 -0400
+Processing by RetailersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"i5ARxLfovqpMRFqOcccGbMO0POKNG1QrmwjH0C+FVmWua1xC0DePst/1XjJsWwMl6rp77RuVP48NEoijT3w4sQ==", "retailer"=>{"name"=>"Del Monte", "year_established"=>"1850", "snacks_attributes"=>{"0"=>{"name"=>"", "calories"=>"", "deliciousness"=>"1"}, "1"=>{"name"=>"", "calories"=>"", "deliciousness"=>"1"}, "2"=>{"name"=>"", "calories"=>"", "deliciousness"=>"1"}}}, "commit"=>"Create Retailer"}
+  [1m[36mRetailer Exists (2.1ms)[0m  [1m[34mSELECT  1 AS one FROM "retailers" WHERE "retailers"."name" = ? LIMIT ?[0m  [["name", "Del Monte"], ["LIMIT", 1]]
+  ↳ app/controllers/retailers_controller.rb:17
+  [1m[35m (0.7ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/retailers_controller.rb:18
+  [1m[36mCACHE Retailer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "retailers" WHERE "retailers"."name" = ? LIMIT ?[0m  [["name", "Del Monte"], ["LIMIT", 1]]
+  ↳ app/controllers/retailers_controller.rb:18
+  [1m[36mRetailer Create (1.7ms)[0m  [1m[32mINSERT INTO "retailers" ("name", "year_established", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Del Monte"], ["year_established", 1850], ["created_at", "2019-06-12 14:43:37.121056"], ["updated_at", "2019-06-12 14:43:37.121056"]]
+  ↳ app/controllers/retailers_controller.rb:18
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/retailers_controller.rb:18
+Redirected to http://localhost:3000/retailers/9
+Completed 302 Found in 173ms (ActiveRecord: 7.1ms)
+
+
+Started GET "/retailers/9" for ::1 at 2019-06-12 10:43:37 -0400
+Processing by RetailersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mRetailer Load (1.8ms)[0m  [1m[34mSELECT  "retailers".* FROM "retailers" WHERE "retailers"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/retailers_controller.rb:7
+  Rendering retailers/show.html.erb within layouts/application
+  [1m[36mSnack Load (2.4ms)[0m  [1m[34mSELECT "snacks".* FROM "snacks" WHERE "snacks"."retailer_id" = ?[0m  [["retailer_id", 9]]
+  ↳ app/views/retailers/show.html.erb:4
+  Rendered retailers/show.html.erb within layouts/application (67.3ms)
+Completed 200 OK in 616ms (Views: 566.0ms | ActiveRecord: 4.2ms)
+
+
+Started POST "/retailers" for ::1 at 2019-06-12 10:43:51 -0400
+Processing by RetailersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"i5ARxLfovqpMRFqOcccGbMO0POKNG1QrmwjH0C+FVmWua1xC0DePst/1XjJsWwMl6rp77RuVP48NEoijT3w4sQ==", "retailer"=>{"name"=>"Del Monte2", "year_established"=>"1850", "snacks_attributes"=>{"0"=>{"name"=>"Canned Pineapple", "calories"=>"", "deliciousness"=>"1"}, "1"=>{"name"=>"", "calories"=>"", "deliciousness"=>"1"}, "2"=>{"name"=>"", "calories"=>"", "deliciousness"=>"1"}}}, "commit"=>"Create Retailer"}
+  [1m[36mSnack Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" WHERE "snacks"."name" = ? LIMIT ?[0m  [["name", "Canned Pineapple"], ["LIMIT", 1]]
+  ↳ app/controllers/retailers_controller.rb:17
+  [1m[36mRetailer Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "retailers" WHERE "retailers"."name" = ? LIMIT ?[0m  [["name", "Del Monte2"], ["LIMIT", 1]]
+  ↳ app/controllers/retailers_controller.rb:17
+  Rendering retailers/new.html.erb within layouts/application
+  Rendered shared/_error_list.html.erb (7.3ms)
+  Rendered retailers/new.html.erb within layouts/application (240.3ms)
+Completed 200 OK in 836ms (Views: 686.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/retailers/new" for ::1 at 2019-06-12 10:44:10 -0400
+Processing by RetailersController#new as HTML
+  Rendering retailers/new.html.erb within layouts/application
+  Rendered shared/_error_list.html.erb (2.8ms)
+  Rendered retailers/new.html.erb within layouts/application (193.2ms)
+Completed 200 OK in 653ms (Views: 608.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/retailers" for ::1 at 2019-06-12 10:44:26 -0400
+Processing by RetailersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wh8zFMI25JKjc569SJNqCWNBQbrapMp6MHMnQEech7fn5H6SpenVijDCmgFVD29ASk8GtUwqod6maWgzJ2XpYw==", "retailer"=>{"name"=>"Toblerone", "year_established"=>"", "snacks_attributes"=>{"0"=>{"name"=>"", "calories"=>"", "deliciousness"=>"1"}, "1"=>{"name"=>"", "calories"=>"", "deliciousness"=>"1"}, "2"=>{"name"=>"", "calories"=>"", "deliciousness"=>"1"}}}, "commit"=>"Create Retailer"}
+  [1m[36mRetailer Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "retailers" WHERE "retailers"."name" = ? LIMIT ?[0m  [["name", "Toblerone"], ["LIMIT", 1]]
+  ↳ app/controllers/retailers_controller.rb:17
+Completed 500 Internal Server Error in 117ms (ActiveRecord: 1.2ms)
+
+
+  
+NoMethodError (undefined method `>' for nil:NilClass):
+  
+app/models/retailer.rb:10:in `year_established_must_be_valid'
+app/controllers/retailers_controller.rb:17:in `create'
+Started GET "/retailers/new" for ::1 at 2019-06-12 10:46:06 -0400
+Processing by RetailersController#new as HTML
+  Rendering retailers/new.html.erb within layouts/application
+  Rendered shared/_error_list.html.erb (8.8ms)
+  Rendered retailers/new.html.erb within layouts/application (223.5ms)
+Completed 200 OK in 1049ms (Views: 696.7ms | ActiveRecord: 27.6ms)
+
+
+Started POST "/retailers" for ::1 at 2019-06-12 10:46:14 -0400
+Processing by RetailersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nUxqMSsea5Dgp4167UmgYKxiOL9PecqrvF+ULmibSl64tye3TMFaiHMWicbw1aUphWx/sNn3oQ8qRdtdCGIkig==", "retailer"=>{"name"=>"Monkeys", "year_established"=>"", "snacks_attributes"=>{"0"=>{"name"=>"", "calories"=>"", "deliciousness"=>"1"}, "1"=>{"name"=>"", "calories"=>"", "deliciousness"=>"1"}, "2"=>{"name"=>"", "calories"=>"", "deliciousness"=>"1"}}}, "commit"=>"Create Retailer"}
+  [1m[36mRetailer Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "retailers" WHERE "retailers"."name" = ? LIMIT ?[0m  [["name", "Monkeys"], ["LIMIT", 1]]
+  ↳ app/controllers/retailers_controller.rb:17
+  Rendering retailers/new.html.erb within layouts/application
+  Rendered shared/_error_list.html.erb (6.9ms)
+  Rendered retailers/new.html.erb within layouts/application (75.5ms)
+Completed 200 OK in 663ms (Views: 543.2ms | ActiveRecord: 1.1ms)
+
+

@@ -13,9 +13,13 @@ class RetailersController < ApplicationController
   end
 
   def create
-    byebug
-    @retailer = Retailer.create(retailer_params)
-    redirect_to retailer_path(@retailer)
+    @retailer = Retailer.new(retailer_params)
+    if @retailer.valid?
+      @retailer.save
+      redirect_to retailer_path(@retailer)
+    else
+      render :new
+    end
   end
 
   private
