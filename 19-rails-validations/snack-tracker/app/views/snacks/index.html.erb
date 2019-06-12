@@ -1,0 +1,12 @@
+<h1>Snacks</h1>
+
+
+<ul id="snack-list">
+    <% @snacks.each do |snack| %>
+        <li class="snack-list-item">
+            <%= link_to snack.name, retailer_snack_path(snack.retailer, snack) %>
+        </li>
+    <% end %>
+</ul>
+
+<%= link_to "Make a New Snack", new_snack_path %>
