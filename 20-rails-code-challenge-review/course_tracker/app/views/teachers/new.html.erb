@@ -1,0 +1,19 @@
+
+
+<% if @teacher.errors %>
+ <% @teacher.errors.full_messages.each do |message| %>
+  <%= message %>
+ <% end %>
+<% end %>
+
+
+ <h1>Create Teacher</h1>
+
+ <%= form_for @teacher do |t| %>
+  <%= t.label :name %>
+  <%= t.text_field :name %>
+
+  <%= t.collection_select(:course_id, Course.all, :id, :name, prompt: true) %>
+
+  <%= t.submit  %>
+ <% end %>

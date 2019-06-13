@@ -1,0 +1,15 @@
+
+
+ <h1><%= @course.name %></h1>
+ <br />
+ Subject: <%= @course.subject %>
+ <br  />
+ Course Number: <%= @course.course_number %>
+
+ <% @course.teachers.each do |teacher| %>
+    <%= link_to teacher.name, teacher_path(teacher) %>
+ <% end %>
+
+ <%= form_tag course_path(@course), method: "DELETE" do %>
+  <%= submit_tag "Delete Course" %>
+ <% end %>
