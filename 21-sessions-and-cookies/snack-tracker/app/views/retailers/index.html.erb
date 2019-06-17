@@ -1,0 +1,8 @@
+<h1>Retailers</h1>
+
+<ul>
+    <% @retailers.each do |r| %>
+        <li><%= link_to r.name, retailer_path(r) %></li>
+    <% end %>
+</ul>
+    
