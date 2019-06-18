@@ -1,6 +1,0 @@
-<h1><%= @retailer.name %></h1>
-<h2>Established in <%= @retailer.year_established %></h2>
-
-<% @retailer.snacks.each do |snack| %>
-    <div><%= link_to snack.name, snack_path(snack) %></div>
-<% end %>
