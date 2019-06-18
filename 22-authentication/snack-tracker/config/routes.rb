@@ -6,7 +6,8 @@ Rails.application.routes.draw do
   get "/login", to: "sessions#new", as: "login"
   post "/login", to: "sessions#create"
   delete "/logout", to: "sessions#destroy"
-  
+  get 'users/new', to: "users#new", as: "new_user"
+  post 'users', to: "users#create", as: "create_user"
   resources :snacks
   resources :retailers do 
     resources :snacks, {only: [:index, :show]}

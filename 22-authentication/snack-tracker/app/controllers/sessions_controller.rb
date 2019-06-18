@@ -7,14 +7,14 @@ class SessionsController < ApplicationController
     # get the user from the database
     @user = User.find_by(username: params[:username])
     # if they're right
-    if @user
+    if @user && @user.authenticate(params[:password])
         # set a cookie with that user's ID
         session["user_id"] = @user.id
         redirect_to snacks_path
     else
     # if they're wrong
         # re-do the page
-        flash.notice = "No user with that username.  Please try again."
+        flash.notice = "No username/password combination found."
         render :new
     end
   end
