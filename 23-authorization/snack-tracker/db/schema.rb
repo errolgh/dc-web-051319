@@ -10,11 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_18_190322) do
+ActiveRecord::Schema.define(version: 2019_06_18_190442) do
 
-  create_table "favorites", id: false, force: :cascade do |t|
-    t.integer "snack_id", null: false
-    t.integer "user_id", null: false
+  create_table "favorites", force: :cascade do |t|
+    t.integer "snack_id"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "retailers", force: :cascade do |t|

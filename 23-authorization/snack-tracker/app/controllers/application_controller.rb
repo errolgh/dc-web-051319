@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
 
-    helper_method :get_current_user
+    helper_method :get_current_user, :current_username, :logged_in?
 
     def get_current_user
         # memoization
@@ -9,6 +9,23 @@ class ApplicationController < ActionController::Base
         else
             @current_user = User.find_by(id: session[:user_id])
         end
+    end
+
+    def current_username
+        user = get_current_user
+        if user
+            return user.username
+        else
+            return "A Nonny Mouse"
+        end
+    end
+
+    def logged_in?
+        !!get_current_user
+    end
+
+    def authorized
+        redirect_to login_path unless logged_in?
     end
 
 end

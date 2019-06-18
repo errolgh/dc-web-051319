@@ -1,25 +1,22 @@
 class SnacksController < ApplicationController
   
   before_action :find_snack, only: [:show, :edit, :update, :destroy]
+  before_action :authorized, except: [:index, :show]
 
   def favorite_snacks
-
     render :favorite
   end
 
   def index
-    if params[:retailer_id]
-      retailer = Retailer.find(params[:retailer_id])
-      @snacks = retailer.snacks
+    if session[:user_id]
+      @user = User.find(session[:user_id])
+      @snacks = @user.snacks
     else
       @snacks = Snack.all
     end
   end
 
   def show
-    cookies["favorite_snack"] = "chocolate chip"
-    cookies["last_snack"] = @snack.name
-    session["secret_favorite"] = "oatmeal raisin"
   end
 
   def new

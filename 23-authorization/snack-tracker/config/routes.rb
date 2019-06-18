@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
-  # get 'snacks/index'
-  # get "my_snacks", to: "snacks#index"
+  get 'favorites/new'
+  post "favorites", to: "favorites#create"
   get "favorite_foods", to: "snacks#favorite_snacks", as: "favorite"
-  # post "favorite_foods", to: "snacks#favorite_snacks", as: "post_favorite"
   get "/login", to: "sessions#new", as: "login"
   post "/login", to: "sessions#create"
   delete "/logout", to: "sessions#destroy"

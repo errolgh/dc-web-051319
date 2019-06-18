@@ -4874,3 +4874,1435 @@ Migrating to CreateJoinTableSnacksUser (20190618190322)
   ↳ bin/rails:9
   [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ bin/rails:9
+Started GET "/" for ::1 at 2019-06-18 15:10:10 -0400
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/paul.nicholsen/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.3) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.3) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateFavorites (20190618190442)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20190618190442_create_favorites.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "favorites" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "snack_id" integer, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190618190442_create_favorites.rb:3
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/paul.nicholsen/.rvm/gems/ruby-2.6.0/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/paul.nicholsen/.rvm/gems/ruby-2.6.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /Users/paul.nicholsen/.rvm/gems/ruby-2.6.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/paul.nicholsen/.rvm/gems/ruby-2.6.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /Users/paul.nicholsen/.rvm/gems/ruby-2.6.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/paul.nicholsen/.rvm/gems/ruby-2.6.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /Users/paul.nicholsen/.rvm/gems/ruby-2.6.0/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ /Users/paul.nicholsen/.rvm/gems/ruby-2.6.0/bin/rake:23
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ /Users/paul.nicholsen/.rvm/gems/ruby-2.6.0/bin/rake:23
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ /Users/paul.nicholsen/.rvm/gems/ruby-2.6.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/paul.nicholsen/.rvm/gems/ruby-2.6.0/bin/rake:23
+Migrating to CreateSnacks (20190611133927)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/paul.nicholsen/.rvm/gems/ruby-2.6.0/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "snacks" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "calories" integer, "deliciousness" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190611133927_create_snacks.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190611133927"]]
+  ↳ /Users/paul.nicholsen/.rvm/gems/ruby-2.6.0/bin/rake:23
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/paul.nicholsen/.rvm/gems/ruby-2.6.0/bin/rake:23
+Migrating to CreateRetailers (20190611194007)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/paul.nicholsen/.rvm/gems/ruby-2.6.0/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "retailers" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "year_established" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190611194007_create_retailers.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190611194007"]]
+  ↳ /Users/paul.nicholsen/.rvm/gems/ruby-2.6.0/bin/rake:23
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/paul.nicholsen/.rvm/gems/ruby-2.6.0/bin/rake:23
+Migrating to AddRetailerIdToSnacks (20190611194114)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/paul.nicholsen/.rvm/gems/ruby-2.6.0/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "snacks" ADD "retailer_id" integer[0m
+  ↳ db/migrate/20190611194114_add_retailer_id_to_snacks.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190611194114"]]
+  ↳ /Users/paul.nicholsen/.rvm/gems/ruby-2.6.0/bin/rake:23
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/paul.nicholsen/.rvm/gems/ruby-2.6.0/bin/rake:23
+Migrating to CreateUsers (20190617135121)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/paul.nicholsen/.rvm/gems/ruby-2.6.0/bin/rake:23
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190617135121_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190617135121"]]
+  ↳ /Users/paul.nicholsen/.rvm/gems/ruby-2.6.0/bin/rake:23
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/paul.nicholsen/.rvm/gems/ruby-2.6.0/bin/rake:23
+Migrating to AddPasswordDigestToUsers (20190618134617)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/paul.nicholsen/.rvm/gems/ruby-2.6.0/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "users" ADD "password_digest" varchar[0m
+  ↳ db/migrate/20190618134617_add_password_digest_to_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190618134617"]]
+  ↳ /Users/paul.nicholsen/.rvm/gems/ruby-2.6.0/bin/rake:23
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/paul.nicholsen/.rvm/gems/ruby-2.6.0/bin/rake:23
+Migrating to CreateFavorites (20190618190442)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/paul.nicholsen/.rvm/gems/ruby-2.6.0/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "favorites" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "snack_id" integer, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190618190442_create_favorites.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190618190442"]]
+  ↳ /Users/paul.nicholsen/.rvm/gems/ruby-2.6.0/bin/rake:23
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/paul.nicholsen/.rvm/gems/ruby-2.6.0/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/paul.nicholsen/.rvm/gems/ruby-2.6.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/paul.nicholsen/.rvm/gems/ruby-2.6.0/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-06-18 19:12:50.943221"], ["updated_at", "2019-06-18 19:12:50.943221"]]
+  ↳ /Users/paul.nicholsen/.rvm/gems/ruby-2.6.0/bin/rake:23
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/paul.nicholsen/.rvm/gems/ruby-2.6.0/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/paul.nicholsen/.rvm/gems/ruby-2.6.0/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/paul.nicholsen/.rvm/gems/ruby-2.6.0/bin/rake:23
+Started GET "/" for ::1 at 2019-06-18 15:13:01 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/paul.nicholsen/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/paul.nicholsen/.rvm/gems/ruby-2.6.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/paul.nicholsen/.rvm/gems/ruby-2.6.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (2.1ms)
+Completed 200 OK in 21ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/favorites/new" for ::1 at 2019-06-18 15:13:31 -0400
+Processing by FavoritesController#new as HTML
+  Rendering favorites/new.html.erb within layouts/application
+  [1m[36mSnack Load (0.2ms)[0m  [1m[34mSELECT  "snacks".* FROM "snacks" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /Users/paul.nicholsen/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Snack Load (0.0ms)[0m  [1m[34mSELECT  "snacks".* FROM "snacks" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /Users/paul.nicholsen/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Snack Load (0.0ms)[0m  [1m[34mSELECT  "snacks".* FROM "snacks" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /Users/paul.nicholsen/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Snack Load (0.0ms)[0m  [1m[34mSELECT  "snacks".* FROM "snacks" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /Users/paul.nicholsen/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendered favorites/new.html.erb within layouts/application (108.1ms)
+Completed 500 Internal Server Error in 119ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `favorites_path' for #<#<Class:0x00007fd0925a47d0>:0x00007fd0932291e0>):
+    1: <h1>Choose Your Favorites</h1>
+    2: 
+    3: <%= form_tag favorites_path do %>
+    4:     <% @snacks.each do |s| %>
+    5:         <div>
+    6:             <%= check_box_tag "snack_ids[]", s.id %>
+  
+app/views/favorites/new.html.erb:3:in `_app_views_favorites_new_html_erb___1952741990616196809_70266892659100'
+Started GET "/favorites/new" for ::1 at 2019-06-18 15:14:23 -0400
+Processing by FavoritesController#new as HTML
+  Rendering favorites/new.html.erb within layouts/application
+  [1m[36mSnack Load (0.2ms)[0m  [1m[34mSELECT "snacks".* FROM "snacks"[0m
+  ↳ app/views/favorites/new.html.erb:4
+  Rendered favorites/new.html.erb within layouts/application (4.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+Completed 200 OK in 413ms (Views: 407.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/snacks" for ::1 at 2019-06-18 15:14:31 -0400
+Processing by SnacksController#index as HTML
+  Rendering snacks/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered snacks/index.html.erb within layouts/application (3.6ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `username' for nil:NilClass):
+    1: <h1><%= get_current_user.username %>'s Snacks</h1>
+    2: 
+    3: 
+    4: 
+  
+app/views/snacks/index.html.erb:1:in `_app_views_snacks_index_html_erb___228026482020759363_70266931839920'
+Started GET "/login" for ::1 at 2019-06-18 15:14:36 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (14.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+Completed 200 OK in 46ms (Views: 43.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/login" for ::1 at 2019-06-18 15:14:40 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FYWp84to4u9pcOvobT6Ut7wQB1ZHpgFobaFAJ8F34Sk8WpYm2HODt3SffKP8miUI+oKpnWf8B2d6t6eQYGL8fg==", "username"=>"emma", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "emma"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+Completed 200 OK in 30ms (Views: 27.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/login" for ::1 at 2019-06-18 15:14:46 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0GhmvfZkbmUMwL7p1UFfI6oLv1cWWj8t9Ifks2Bz+sf3jqnuW328iCzQEQjeWk3iNiIJrTfihW/HlMy9zmUDVA==", "username"=>"victoria", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "victoria"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+Completed 200 OK in 58ms (Views: 55.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/login" for ::1 at 2019-06-18 15:14:48 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+Completed 200 OK in 37ms (Views: 35.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/new" for ::1 at 2019-06-18 15:14:50 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_list.html.erb (0.3ms)
+  Rendered users/new.html.erb within layouts/application (6.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+Completed 200 OK in 44ms (Views: 31.0ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/users" for ::1 at 2019-06-18 15:14:55 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rqR9gc10rD7MWBln2EidPuvqrZ4Syu+Lv5+M8Vm5Kjk4nMgsI1nI97CsYVngnHIXFzjaa0W45GGexdUxL7gT7w==", "user"=>{"username"=>"paul", "password"=>"[FILTERED]"}, "commit"=>"User-fy"}
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "paul"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mCACHE User Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "paul"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?)[0m  [["username", "paul"], ["created_at", "2019-06-18 19:14:55.563621"], ["updated_at", "2019-06-18 19:14:55.563621"], ["password_digest", "$2a$12$ILS.c/97j75gSXFJDNDYaOZAcCfe0O3c4bQB/jqLbTwhe8pQCV6iC"]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:11
+Redirected to http://localhost:3000/snacks
+Completed 302 Found in 237ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/snacks" for ::1 at 2019-06-18 15:14:55 -0400
+Processing by SnacksController#index as HTML
+  Rendering snacks/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mSnack Load (0.1ms)[0m  [1m[34mSELECT "snacks".* FROM "snacks"[0m
+  ↳ app/views/snacks/index.html.erb:10
+  Rendered snacks/index.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 28ms (Views: 26.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/snacks/new" for ::1 at 2019-06-18 15:15:03 -0400
+Processing by SnacksController#new as HTML
+  Rendering snacks/new.html.erb within layouts/application
+  Rendered shared/_error_list.html.erb (0.6ms)
+  [1m[36mRetailer Load (0.2ms)[0m  [1m[34mSELECT "retailers".* FROM "retailers"[0m
+  ↳ app/views/snacks/_snack_form.html.erb:9
+  Rendered snacks/_snack_form.html.erb (12.1ms)
+  Rendered snacks/new.html.erb within layouts/application (16.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+Completed 200 OK in 54ms (Views: 39.1ms | ActiveRecord: 1.2ms)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/paul.nicholsen/.rvm/gems/ruby-2.6.0/bin/rake:23
+  [1m[36mSnack Load (0.1ms)[0m  [1m[34mSELECT "snacks".* FROM "snacks"[0m
+  ↳ db/seeds.rb:9
+  [1m[36mRetailer Load (0.1ms)[0m  [1m[34mSELECT "retailers".* FROM "retailers"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:12
+  [1m[36mRetailer Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "retailers" WHERE "retailers"."name" = ? LIMIT ?[0m  [["name", "Hostess"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:12
+  [1m[36mRetailer Create (0.4ms)[0m  [1m[32mINSERT INTO "retailers" ("name", "year_established", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Hostess"], ["year_established", 1902], ["created_at", "2019-06-18 19:15:09.740605"], ["updated_at", "2019-06-18 19:15:09.740605"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[36mRetailer Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "retailers" WHERE "retailers"."name" = ? LIMIT ?[0m  [["name", "Girl Scouts"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:13
+  [1m[36mRetailer Create (0.3ms)[0m  [1m[32mINSERT INTO "retailers" ("name", "year_established", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Girl Scouts"], ["year_established", 1887], ["created_at", "2019-06-18 19:15:09.744548"], ["updated_at", "2019-06-18 19:15:09.744548"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[36mSnack Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" WHERE "snacks"."name" = ? LIMIT ?[0m  [["name", "Dunkaroos"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:15
+  [1m[36mSnack Create (0.3ms)[0m  [1m[32mINSERT INTO "snacks" ("name", "calories", "deliciousness", "created_at", "updated_at", "retailer_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Dunkaroos"], ["calories", 500], ["deliciousness", 3], ["created_at", "2019-06-18 19:15:09.757114"], ["updated_at", "2019-06-18 19:15:09.757114"], ["retailer_id", 1]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:16
+  [1m[36mSnack Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" WHERE "snacks"."name" = ? LIMIT ?[0m  [["name", "Sun Chips"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mSnack Create (0.4ms)[0m  [1m[32mINSERT INTO "snacks" ("name", "calories", "deliciousness", "created_at", "updated_at", "retailer_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Sun Chips"], ["calories", 300], ["deliciousness", 4], ["created_at", "2019-06-18 19:15:09.760778"], ["updated_at", "2019-06-18 19:15:09.760778"], ["retailer_id", 1]]
+  ↳ db/seeds.rb:16
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:17
+  [1m[36mSnack Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" WHERE "snacks"."name" = ? LIMIT ?[0m  [["name", "Samoas"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:17
+  [1m[36mSnack Create (0.3ms)[0m  [1m[32mINSERT INTO "snacks" ("name", "calories", "deliciousness", "created_at", "updated_at", "retailer_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Samoas"], ["calories", 300], ["deliciousness", 4], ["created_at", "2019-06-18 19:15:09.764504"], ["updated_at", "2019-06-18 19:15:09.764504"], ["retailer_id", 2]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:17
+Started GET "/snacks/new" for ::1 at 2019-06-18 15:15:11 -0400
+Processing by SnacksController#new as HTML
+  Rendering snacks/new.html.erb within layouts/application
+  Rendered shared/_error_list.html.erb (0.7ms)
+  [1m[36mRetailer Load (0.2ms)[0m  [1m[34mSELECT "retailers".* FROM "retailers"[0m
+  ↳ app/views/snacks/_snack_form.html.erb:9
+  Rendered snacks/_snack_form.html.erb (8.9ms)
+  Rendered snacks/new.html.erb within layouts/application (12.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+Completed 200 OK in 43ms (Views: 41.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/snacks" for ::1 at 2019-06-18 15:15:14 -0400
+Processing by SnacksController#index as HTML
+  Rendering snacks/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mSnack Load (0.1ms)[0m  [1m[34mSELECT "snacks".* FROM "snacks"[0m
+  ↳ app/views/snacks/index.html.erb:10
+  Rendered snacks/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 30ms (Views: 28.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/favorites/new" for ::1 at 2019-06-18 15:15:17 -0400
+Processing by FavoritesController#new as HTML
+  Rendering favorites/new.html.erb within layouts/application
+  [1m[36mSnack Load (0.2ms)[0m  [1m[34mSELECT "snacks".* FROM "snacks"[0m
+  ↳ app/views/favorites/new.html.erb:4
+  Rendered favorites/new.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+Completed 200 OK in 27ms (Views: 25.7ms | ActiveRecord: 0.3ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/paul.nicholsen/.rvm/gems/ruby-2.6.0/bin/rake:23
+  [1m[36mSnack Load (0.2ms)[0m  [1m[34mSELECT "snacks".* FROM "snacks"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mSnack Destroy (0.3ms)[0m  [1m[31mDELETE FROM "snacks" WHERE "snacks"."id" = ?[0m  [["id", 1]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mSnack Destroy (0.3ms)[0m  [1m[31mDELETE FROM "snacks" WHERE "snacks"."id" = ?[0m  [["id", 2]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mSnack Destroy (0.2ms)[0m  [1m[31mDELETE FROM "snacks" WHERE "snacks"."id" = ?[0m  [["id", 3]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mRetailer Load (0.2ms)[0m  [1m[34mSELECT "retailers".* FROM "retailers"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mRetailer Destroy (0.3ms)[0m  [1m[31mDELETE FROM "retailers" WHERE "retailers"."id" = ?[0m  [["id", 1]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mRetailer Destroy (0.2ms)[0m  [1m[31mDELETE FROM "retailers" WHERE "retailers"."id" = ?[0m  [["id", 2]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:12
+  [1m[36mRetailer Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "retailers" WHERE "retailers"."name" = ? LIMIT ?[0m  [["name", "Hostess"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:12
+  [1m[36mRetailer Create (0.3ms)[0m  [1m[32mINSERT INTO "retailers" ("name", "year_established", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Hostess"], ["year_established", 1902], ["created_at", "2019-06-18 19:18:24.091825"], ["updated_at", "2019-06-18 19:18:24.091825"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[36mRetailer Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "retailers" WHERE "retailers"."name" = ? LIMIT ?[0m  [["name", "Girl Scouts"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:13
+  [1m[36mRetailer Create (0.3ms)[0m  [1m[32mINSERT INTO "retailers" ("name", "year_established", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Girl Scouts"], ["year_established", 1887], ["created_at", "2019-06-18 19:18:24.095728"], ["updated_at", "2019-06-18 19:18:24.095728"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[36mSnack Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" WHERE "snacks"."name" = ? LIMIT ?[0m  [["name", "Dunkaroos"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:15
+  [1m[36mSnack Create (0.3ms)[0m  [1m[32mINSERT INTO "snacks" ("name", "calories", "deliciousness", "created_at", "updated_at", "retailer_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Dunkaroos"], ["calories", 500], ["deliciousness", 3], ["created_at", "2019-06-18 19:18:24.102733"], ["updated_at", "2019-06-18 19:18:24.102733"], ["retailer_id", 3]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:16
+  [1m[36mSnack Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" WHERE "snacks"."name" = ? LIMIT ?[0m  [["name", "Sun Chips"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mSnack Create (0.3ms)[0m  [1m[32mINSERT INTO "snacks" ("name", "calories", "deliciousness", "created_at", "updated_at", "retailer_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Sun Chips"], ["calories", 300], ["deliciousness", 4], ["created_at", "2019-06-18 19:18:24.106348"], ["updated_at", "2019-06-18 19:18:24.106348"], ["retailer_id", 3]]
+  ↳ db/seeds.rb:16
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:17
+  [1m[36mSnack Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" WHERE "snacks"."name" = ? LIMIT ?[0m  [["name", "Samoas"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:17
+  [1m[36mSnack Create (0.3ms)[0m  [1m[32mINSERT INTO "snacks" ("name", "calories", "deliciousness", "created_at", "updated_at", "retailer_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Samoas"], ["calories", 300], ["deliciousness", 4], ["created_at", "2019-06-18 19:18:24.109797"], ["updated_at", "2019-06-18 19:18:24.109797"], ["retailer_id", 4]]
+  ↳ db/seeds.rb:17
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[36mSnack Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" WHERE "snacks"."name" = ? LIMIT ?[0m  [["name", "Trefoils"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mSnack Create (0.4ms)[0m  [1m[32mINSERT INTO "snacks" ("name", "calories", "deliciousness", "created_at", "updated_at", "retailer_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Trefoils"], ["calories", 300], ["deliciousness", 4], ["created_at", "2019-06-18 19:18:24.113247"], ["updated_at", "2019-06-18 19:18:24.113247"], ["retailer_id", 4]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:19
+  [1m[36mSnack Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" WHERE "snacks"."name" = ? LIMIT ?[0m  [["name", "Thin Mints"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mSnack Create (0.3ms)[0m  [1m[32mINSERT INTO "snacks" ("name", "calories", "deliciousness", "created_at", "updated_at", "retailer_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Thin Mints"], ["calories", 300], ["deliciousness", 1], ["created_at", "2019-06-18 19:18:24.116883"], ["updated_at", "2019-06-18 19:18:24.116883"], ["retailer_id", 4]]
+  ↳ db/seeds.rb:19
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[36mSnack Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" WHERE "snacks"."name" = ? LIMIT ?[0m  [["name", "Twinkies"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mSnack Create (0.3ms)[0m  [1m[32mINSERT INTO "snacks" ("name", "calories", "deliciousness", "created_at", "updated_at", "retailer_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Twinkies"], ["calories", 300], ["deliciousness", 4], ["created_at", "2019-06-18 19:18:24.119974"], ["updated_at", "2019-06-18 19:18:24.119974"], ["retailer_id", 4]]
+  ↳ db/seeds.rb:20
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:21
+  [1m[36mSnack Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" WHERE "snacks"."name" = ? LIMIT ?[0m  [["name", "Ho Hos"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:21
+  [1m[36mSnack Create (0.7ms)[0m  [1m[32mINSERT INTO "snacks" ("name", "calories", "deliciousness", "created_at", "updated_at", "retailer_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Ho Hos"], ["calories", 300], ["deliciousness", 4], ["created_at", "2019-06-18 19:18:24.123886"], ["updated_at", "2019-06-18 19:18:24.123886"], ["retailer_id", 4]]
+  ↳ db/seeds.rb:21
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:22
+  [1m[36mSnack Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" WHERE "snacks"."name" = ? LIMIT ?[0m  [["name", "M&Ms"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mSnack Create (0.3ms)[0m  [1m[32mINSERT INTO "snacks" ("name", "calories", "deliciousness", "created_at", "updated_at", "retailer_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "M&Ms"], ["calories", 300], ["deliciousness", 4], ["created_at", "2019-06-18 19:18:24.128019"], ["updated_at", "2019-06-18 19:18:24.128019"], ["retailer_id", 4]]
+  ↳ db/seeds.rb:22
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:22
+Started GET "/favorites/new" for ::1 at 2019-06-18 15:18:27 -0400
+Processing by FavoritesController#new as HTML
+  Rendering favorites/new.html.erb within layouts/application
+  [1m[36mSnack Load (0.3ms)[0m  [1m[34mSELECT "snacks".* FROM "snacks"[0m
+  ↳ app/views/favorites/new.html.erb:4
+  Rendered favorites/new.html.erb within layouts/application (11.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+Completed 200 OK in 47ms (Views: 38.1ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/favorites/new" for ::1 at 2019-06-18 15:21:42 -0400
+Processing by FavoritesController#new as HTML
+  Rendering favorites/new.html.erb within layouts/application
+  [1m[36mSnack Load (0.4ms)[0m  [1m[34mSELECT "snacks".* FROM "snacks"[0m
+  ↳ app/views/favorites/new.html.erb:4
+  Rendered favorites/new.html.erb within layouts/application (10.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+Completed 200 OK in 63ms (Views: 54.2ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/favorites" for ::1 at 2019-06-18 15:21:50 -0400
+Processing by FavoritesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3ygksb0oWYVPWJQ0A6OtvfcTW9bp3m7pgzTPhLIp6wb4zuviEDGLaG9IO9UIuL98azrtLMhm1KuwJ+eKHD8SlQ==", "snack_ids"=>["4", "11"], "commit"=>"Choose Your Faves"}
+  [1m[36mSnack Load (0.2ms)[0m  [1m[34mSELECT  "snacks".* FROM "snacks" WHERE "snacks"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:9
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/favorites_controller.rb:10
+  [1m[36mFavorite Create (0.4ms)[0m  [1m[32mINSERT INTO "favorites" ("snack_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["snack_id", 4], ["user_id", 1], ["created_at", "2019-06-18 19:21:50.476019"], ["updated_at", "2019-06-18 19:21:50.476019"]]
+  ↳ app/controllers/favorites_controller.rb:10
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/favorites_controller.rb:10
+  [1m[36mSnack Load (0.1ms)[0m  [1m[34mSELECT  "snacks".* FROM "snacks" WHERE "snacks"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/favorites_controller.rb:10
+  [1m[36mFavorite Create (0.4ms)[0m  [1m[32mINSERT INTO "favorites" ("snack_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["snack_id", 11], ["user_id", 1], ["created_at", "2019-06-18 19:21:50.480050"], ["updated_at", "2019-06-18 19:21:50.480050"]]
+  ↳ app/controllers/favorites_controller.rb:10
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/favorites_controller.rb:10
+Redirected to http://localhost:3000/snacks
+Completed 302 Found in 36ms (ActiveRecord: 3.7ms)
+
+
+Started GET "/snacks" for ::1 at 2019-06-18 15:21:50 -0400
+Processing by SnacksController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/snacks_controller.rb:12
+  Rendering snacks/index.html.erb within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mSnack Load (0.2ms)[0m  [1m[34mSELECT "snacks".* FROM "snacks" INNER JOIN "favorites" ON "snacks"."id" = "favorites"."snack_id" WHERE "favorites"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/snacks/index.html.erb:6
+  Rendered snacks/index.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 37ms (Views: 34.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/favorites/new" for ::1 at 2019-06-18 15:22:00 -0400
+Processing by FavoritesController#new as HTML
+  Rendering favorites/new.html.erb within layouts/application
+  [1m[36mSnack Load (0.2ms)[0m  [1m[34mSELECT "snacks".* FROM "snacks"[0m
+  ↳ app/views/favorites/new.html.erb:4
+  Rendered favorites/new.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+Completed 200 OK in 27ms (Views: 25.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/favorites" for ::1 at 2019-06-18 15:22:18 -0400
+Processing by FavoritesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zgQ23i6ENpXLgwLtmCHBgyJ0VzqRdiqvZJVTcdT9Xmjp4vmNg53keOuTrQyTOtNCvl3hwLDOkO1Xhnt/euun+w==", "snack_ids"=>["4", "5", "11"], "commit"=>"Choose Your Faves"}
+  [1m[36mSnack Load (0.1ms)[0m  [1m[34mSELECT  "snacks".* FROM "snacks" WHERE "snacks"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:9
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/favorites_controller.rb:10
+  [1m[36mFavorite Create (0.5ms)[0m  [1m[32mINSERT INTO "favorites" ("snack_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["snack_id", 4], ["user_id", 1], ["created_at", "2019-06-18 19:22:18.842256"], ["updated_at", "2019-06-18 19:22:18.842256"]]
+  ↳ app/controllers/favorites_controller.rb:10
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/favorites_controller.rb:10
+  [1m[36mSnack Load (0.2ms)[0m  [1m[34mSELECT  "snacks".* FROM "snacks" WHERE "snacks"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/favorites_controller.rb:10
+  [1m[36mFavorite Create (0.6ms)[0m  [1m[32mINSERT INTO "favorites" ("snack_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["snack_id", 5], ["user_id", 1], ["created_at", "2019-06-18 19:22:18.859160"], ["updated_at", "2019-06-18 19:22:18.859160"]]
+  ↳ app/controllers/favorites_controller.rb:10
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/favorites_controller.rb:10
+  [1m[36mSnack Load (0.1ms)[0m  [1m[34mSELECT  "snacks".* FROM "snacks" WHERE "snacks"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/favorites_controller.rb:10
+  [1m[36mFavorite Create (0.7ms)[0m  [1m[32mINSERT INTO "favorites" ("snack_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["snack_id", 11], ["user_id", 1], ["created_at", "2019-06-18 19:22:18.863684"], ["updated_at", "2019-06-18 19:22:18.863684"]]
+  ↳ app/controllers/favorites_controller.rb:10
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/favorites_controller.rb:10
+Redirected to http://localhost:3000/snacks
+Completed 302 Found in 28ms (ActiveRecord: 7.3ms)
+
+
+Started GET "/snacks" for ::1 at 2019-06-18 15:22:18 -0400
+Processing by SnacksController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/snacks_controller.rb:12
+  Rendering snacks/index.html.erb within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mSnack Load (0.1ms)[0m  [1m[34mSELECT "snacks".* FROM "snacks" INNER JOIN "favorites" ON "snacks"."id" = "favorites"."snack_id" WHERE "favorites"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/snacks/index.html.erb:6
+  Rendered snacks/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 47ms (Views: 45.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/favorites/new" for ::1 at 2019-06-18 15:24:11 -0400
+Processing by FavoritesController#new as HTML
+  Rendering favorites/new.html.erb within layouts/application
+  [1m[36mSnack Load (0.1ms)[0m  [1m[34mSELECT "snacks".* FROM "snacks"[0m
+  ↳ app/views/favorites/new.html.erb:4
+  Rendered favorites/new.html.erb within layouts/application (105.9ms)
+Completed 500 Internal Server Error in 110ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `current_user' for #<#<Class:0x00007fd092de50c0>:0x00007fd093e34a48>):
+    3: <%= form_tag favorites_path do %>
+    4:     <% @snacks.each do |s| %>
+    5:         <div>
+    6:             <%= check_box_tag "snack_ids[]", s.id, checked = current_user.snacks.include?(s) %>
+    7:             <%= s.name %>
+    8:         </div>
+    9:     <% end %>
+  
+app/views/favorites/new.html.erb:6:in `block (2 levels) in _app_views_favorites_new_html_erb___1952741990616196809_70266905538580'
+app/views/favorites/new.html.erb:4:in `block in _app_views_favorites_new_html_erb___1952741990616196809_70266905538580'
+app/views/favorites/new.html.erb:3:in `_app_views_favorites_new_html_erb___1952741990616196809_70266905538580'
+Started GET "/favorites/new" for ::1 at 2019-06-18 15:24:20 -0400
+Processing by FavoritesController#new as HTML
+  Rendering favorites/new.html.erb within layouts/application
+  [1m[36mSnack Load (0.1ms)[0m  [1m[34mSELECT "snacks".* FROM "snacks"[0m
+  ↳ app/views/favorites/new.html.erb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mSnack Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" INNER JOIN "favorites" ON "snacks"."id" = "favorites"."snack_id" WHERE "favorites"."user_id" = ? AND "snacks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 4], ["LIMIT", 1]]
+  ↳ app/views/favorites/new.html.erb:6
+  [1m[36mSnack Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" INNER JOIN "favorites" ON "snacks"."id" = "favorites"."snack_id" WHERE "favorites"."user_id" = ? AND "snacks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 5], ["LIMIT", 1]]
+  ↳ app/views/favorites/new.html.erb:6
+  [1m[36mSnack Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" INNER JOIN "favorites" ON "snacks"."id" = "favorites"."snack_id" WHERE "favorites"."user_id" = ? AND "snacks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 6], ["LIMIT", 1]]
+  ↳ app/views/favorites/new.html.erb:6
+  [1m[36mSnack Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" INNER JOIN "favorites" ON "snacks"."id" = "favorites"."snack_id" WHERE "favorites"."user_id" = ? AND "snacks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 7], ["LIMIT", 1]]
+  ↳ app/views/favorites/new.html.erb:6
+  [1m[36mSnack Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" INNER JOIN "favorites" ON "snacks"."id" = "favorites"."snack_id" WHERE "favorites"."user_id" = ? AND "snacks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 8], ["LIMIT", 1]]
+  ↳ app/views/favorites/new.html.erb:6
+  [1m[36mSnack Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" INNER JOIN "favorites" ON "snacks"."id" = "favorites"."snack_id" WHERE "favorites"."user_id" = ? AND "snacks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 9], ["LIMIT", 1]]
+  ↳ app/views/favorites/new.html.erb:6
+  [1m[36mSnack Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" INNER JOIN "favorites" ON "snacks"."id" = "favorites"."snack_id" WHERE "favorites"."user_id" = ? AND "snacks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 10], ["LIMIT", 1]]
+  ↳ app/views/favorites/new.html.erb:6
+  [1m[36mSnack Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" INNER JOIN "favorites" ON "snacks"."id" = "favorites"."snack_id" WHERE "favorites"."user_id" = ? AND "snacks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 11], ["LIMIT", 1]]
+  ↳ app/views/favorites/new.html.erb:6
+  Rendered favorites/new.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 58ms (Views: 54.9ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/favorites" for ::1 at 2019-06-18 15:24:25 -0400
+Processing by FavoritesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AY2Bwih9MyoWVyq3OvOhECGSb41O0brtr4X/JrVhYwAma06RhWThxzZHhVYx6LPRvbvZd29pAK+cltcoG3eakw==", "snack_ids"=>["4", "5", "9", "11"], "commit"=>"Choose Your Faves"}
+  [1m[36mSnack Load (0.2ms)[0m  [1m[34mSELECT  "snacks".* FROM "snacks" WHERE "snacks"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:9
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/favorites_controller.rb:10
+  [1m[36mFavorite Create (0.5ms)[0m  [1m[32mINSERT INTO "favorites" ("snack_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["snack_id", 4], ["user_id", 1], ["created_at", "2019-06-18 19:24:25.329568"], ["updated_at", "2019-06-18 19:24:25.329568"]]
+  ↳ app/controllers/favorites_controller.rb:10
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/favorites_controller.rb:10
+  [1m[36mSnack Load (0.2ms)[0m  [1m[34mSELECT  "snacks".* FROM "snacks" WHERE "snacks"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/favorites_controller.rb:10
+  [1m[36mFavorite Create (0.5ms)[0m  [1m[32mINSERT INTO "favorites" ("snack_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["snack_id", 5], ["user_id", 1], ["created_at", "2019-06-18 19:24:25.335825"], ["updated_at", "2019-06-18 19:24:25.335825"]]
+  ↳ app/controllers/favorites_controller.rb:10
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/favorites_controller.rb:10
+  [1m[36mSnack Load (0.1ms)[0m  [1m[34mSELECT  "snacks".* FROM "snacks" WHERE "snacks"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/favorites_controller.rb:10
+  [1m[36mFavorite Create (0.5ms)[0m  [1m[32mINSERT INTO "favorites" ("snack_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["snack_id", 9], ["user_id", 1], ["created_at", "2019-06-18 19:24:25.342679"], ["updated_at", "2019-06-18 19:24:25.342679"]]
+  ↳ app/controllers/favorites_controller.rb:10
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/favorites_controller.rb:10
+  [1m[36mSnack Load (0.2ms)[0m  [1m[34mSELECT  "snacks".* FROM "snacks" WHERE "snacks"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/favorites_controller.rb:10
+  [1m[36mFavorite Create (0.4ms)[0m  [1m[32mINSERT INTO "favorites" ("snack_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["snack_id", 11], ["user_id", 1], ["created_at", "2019-06-18 19:24:25.347489"], ["updated_at", "2019-06-18 19:24:25.347489"]]
+  ↳ app/controllers/favorites_controller.rb:10
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/favorites_controller.rb:10
+Redirected to http://localhost:3000/snacks
+Completed 302 Found in 44ms (ActiveRecord: 9.7ms)
+
+
+Started GET "/snacks" for ::1 at 2019-06-18 15:24:25 -0400
+Processing by SnacksController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/snacks_controller.rb:12
+  Rendering snacks/index.html.erb within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mSnack Load (0.2ms)[0m  [1m[34mSELECT "snacks".* FROM "snacks" INNER JOIN "favorites" ON "snacks"."id" = "favorites"."snack_id" WHERE "favorites"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/snacks/index.html.erb:6
+  Rendered snacks/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 30ms (Views: 28.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/favorites/new" for ::1 at 2019-06-18 15:24:30 -0400
+Processing by FavoritesController#new as HTML
+  Rendering favorites/new.html.erb within layouts/application
+  [1m[36mSnack Load (0.2ms)[0m  [1m[34mSELECT "snacks".* FROM "snacks"[0m
+  ↳ app/views/favorites/new.html.erb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mSnack Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" INNER JOIN "favorites" ON "snacks"."id" = "favorites"."snack_id" WHERE "favorites"."user_id" = ? AND "snacks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 4], ["LIMIT", 1]]
+  ↳ app/views/favorites/new.html.erb:6
+  [1m[36mSnack Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" INNER JOIN "favorites" ON "snacks"."id" = "favorites"."snack_id" WHERE "favorites"."user_id" = ? AND "snacks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 5], ["LIMIT", 1]]
+  ↳ app/views/favorites/new.html.erb:6
+  [1m[36mSnack Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" INNER JOIN "favorites" ON "snacks"."id" = "favorites"."snack_id" WHERE "favorites"."user_id" = ? AND "snacks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 6], ["LIMIT", 1]]
+  ↳ app/views/favorites/new.html.erb:6
+  [1m[36mSnack Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" INNER JOIN "favorites" ON "snacks"."id" = "favorites"."snack_id" WHERE "favorites"."user_id" = ? AND "snacks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 7], ["LIMIT", 1]]
+  ↳ app/views/favorites/new.html.erb:6
+  [1m[36mSnack Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" INNER JOIN "favorites" ON "snacks"."id" = "favorites"."snack_id" WHERE "favorites"."user_id" = ? AND "snacks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 8], ["LIMIT", 1]]
+  ↳ app/views/favorites/new.html.erb:6
+  [1m[36mSnack Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" INNER JOIN "favorites" ON "snacks"."id" = "favorites"."snack_id" WHERE "favorites"."user_id" = ? AND "snacks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 9], ["LIMIT", 1]]
+  ↳ app/views/favorites/new.html.erb:6
+  [1m[36mSnack Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" INNER JOIN "favorites" ON "snacks"."id" = "favorites"."snack_id" WHERE "favorites"."user_id" = ? AND "snacks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 10], ["LIMIT", 1]]
+  ↳ app/views/favorites/new.html.erb:6
+  [1m[36mSnack Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" INNER JOIN "favorites" ON "snacks"."id" = "favorites"."snack_id" WHERE "favorites"."user_id" = ? AND "snacks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 11], ["LIMIT", 1]]
+  ↳ app/views/favorites/new.html.erb:6
+  Rendered favorites/new.html.erb within layouts/application (31.5ms)
+Completed 200 OK in 87ms (Views: 82.5ms | ActiveRecord: 3.0ms)
+
+
+Started DELETE "/logout" for ::1 at 2019-06-18 15:24:41 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"GVimILp6jCeGE+H2eXdO4QMv5uwe0AObBzKf6yVZi00+vmlzF2NeyqYDThdybFwgnwZQFj9oudk0Ibfli09y3g=="}
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2019-06-18 15:24:41 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+Completed 200 OK in 58ms (Views: 56.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/favorites/new" for ::1 at 2019-06-18 15:24:43 -0400
+Processing by FavoritesController#new as HTML
+  Rendering favorites/new.html.erb within layouts/application
+  [1m[36mSnack Load (0.2ms)[0m  [1m[34mSELECT "snacks".* FROM "snacks"[0m
+  ↳ app/views/favorites/new.html.erb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered favorites/new.html.erb within layouts/application (5.9ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `snacks' for nil:NilClass):
+    3: <%= form_tag favorites_path do %>
+    4:     <% @snacks.each do |s| %>
+    5:         <div>
+    6:             <%= check_box_tag "snack_ids[]", s.id, checked = get_current_user.snacks.include?(s) %>
+    7:             <%= s.name %>
+    8:         </div>
+    9:     <% end %>
+  
+app/views/favorites/new.html.erb:6:in `block (2 levels) in _app_views_favorites_new_html_erb___1952741990616196809_70266895437860'
+app/views/favorites/new.html.erb:4:in `block in _app_views_favorites_new_html_erb___1952741990616196809_70266895437860'
+app/views/favorites/new.html.erb:3:in `_app_views_favorites_new_html_erb___1952741990616196809_70266895437860'
+Started POST "/login" for ::1 at 2019-06-18 15:25:05 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hkgB1gJw31uPB7sqMKZf7aya/Gp+YYNMVA6Dm2t+Lfu91y0PUzmOIT1x6/nYqjcDusQsx4xEl3FtvToBlNFgjw==", "username"=>"paul", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "paul"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8
+Redirected to http://localhost:3000/snacks
+Completed 302 Found in 231ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/snacks" for ::1 at 2019-06-18 15:25:05 -0400
+Processing by SnacksController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/snacks_controller.rb:12
+  Rendering snacks/index.html.erb within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mSnack Load (0.1ms)[0m  [1m[34mSELECT "snacks".* FROM "snacks" INNER JOIN "favorites" ON "snacks"."id" = "favorites"."snack_id" WHERE "favorites"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/snacks/index.html.erb:6
+  Rendered snacks/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 26ms (Views: 23.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/favorites/new" for ::1 at 2019-06-18 15:29:58 -0400
+Processing by FavoritesController#new as HTML
+  Rendering favorites/new.html.erb within layouts/application
+  [1m[36mSnack Load (0.2ms)[0m  [1m[34mSELECT "snacks".* FROM "snacks"[0m
+  ↳ app/views/favorites/new.html.erb:4
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mSnack Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" INNER JOIN "favorites" ON "snacks"."id" = "favorites"."snack_id" WHERE "favorites"."user_id" = ? AND "snacks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 4], ["LIMIT", 1]]
+  ↳ app/views/favorites/new.html.erb:6
+  [1m[36mSnack Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" INNER JOIN "favorites" ON "snacks"."id" = "favorites"."snack_id" WHERE "favorites"."user_id" = ? AND "snacks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 5], ["LIMIT", 1]]
+  ↳ app/views/favorites/new.html.erb:6
+  [1m[36mSnack Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" INNER JOIN "favorites" ON "snacks"."id" = "favorites"."snack_id" WHERE "favorites"."user_id" = ? AND "snacks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 6], ["LIMIT", 1]]
+  ↳ app/views/favorites/new.html.erb:6
+  [1m[36mSnack Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" INNER JOIN "favorites" ON "snacks"."id" = "favorites"."snack_id" WHERE "favorites"."user_id" = ? AND "snacks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 7], ["LIMIT", 1]]
+  ↳ app/views/favorites/new.html.erb:6
+  [1m[36mSnack Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" INNER JOIN "favorites" ON "snacks"."id" = "favorites"."snack_id" WHERE "favorites"."user_id" = ? AND "snacks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 8], ["LIMIT", 1]]
+  ↳ app/views/favorites/new.html.erb:6
+  [1m[36mSnack Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" INNER JOIN "favorites" ON "snacks"."id" = "favorites"."snack_id" WHERE "favorites"."user_id" = ? AND "snacks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 9], ["LIMIT", 1]]
+  ↳ app/views/favorites/new.html.erb:6
+  [1m[36mSnack Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" INNER JOIN "favorites" ON "snacks"."id" = "favorites"."snack_id" WHERE "favorites"."user_id" = ? AND "snacks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 10], ["LIMIT", 1]]
+  ↳ app/views/favorites/new.html.erb:6
+  [1m[36mSnack Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" INNER JOIN "favorites" ON "snacks"."id" = "favorites"."snack_id" WHERE "favorites"."user_id" = ? AND "snacks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 11], ["LIMIT", 1]]
+  ↳ app/views/favorites/new.html.erb:6
+  Rendered favorites/new.html.erb within layouts/application (55.8ms)
+Completed 200 OK in 107ms (Views: 95.2ms | ActiveRecord: 4.4ms)
+
+
+Started POST "/favorites" for ::1 at 2019-06-18 15:30:04 -0400
+Processing by FavoritesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tazK6/Zpo6mRfjqlSVTUl2lGdCnSO+qSRe95N9oIBRSOM+YypyDy0yMIanahWLx5fxikhCAe/q98XMCtJadIYA==", "snack_ids"=>["4", "6", "9", "11"], "commit"=>"Choose Your Faves"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms)
+
+
+  
+NoMethodError (undefined method `each' for nil:NilClass):
+  
+app/controllers/favorites_controller.rb:9:in `block in create'
+app/controllers/favorites_controller.rb:8:in `each'
+app/controllers/favorites_controller.rb:8:in `create'
+Started GET "/favorites/new" for ::1 at 2019-06-18 15:30:18 -0400
+Processing by FavoritesController#new as HTML
+  Rendering favorites/new.html.erb within layouts/application
+  [1m[36mSnack Load (0.1ms)[0m  [1m[34mSELECT "snacks".* FROM "snacks"[0m
+  ↳ app/views/favorites/new.html.erb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mSnack Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" INNER JOIN "favorites" ON "snacks"."id" = "favorites"."snack_id" WHERE "favorites"."user_id" = ? AND "snacks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 4], ["LIMIT", 1]]
+  ↳ app/views/favorites/new.html.erb:6
+  [1m[36mSnack Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" INNER JOIN "favorites" ON "snacks"."id" = "favorites"."snack_id" WHERE "favorites"."user_id" = ? AND "snacks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 5], ["LIMIT", 1]]
+  ↳ app/views/favorites/new.html.erb:6
+  [1m[36mSnack Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" INNER JOIN "favorites" ON "snacks"."id" = "favorites"."snack_id" WHERE "favorites"."user_id" = ? AND "snacks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 6], ["LIMIT", 1]]
+  ↳ app/views/favorites/new.html.erb:6
+  [1m[36mSnack Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" INNER JOIN "favorites" ON "snacks"."id" = "favorites"."snack_id" WHERE "favorites"."user_id" = ? AND "snacks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 7], ["LIMIT", 1]]
+  ↳ app/views/favorites/new.html.erb:6
+  [1m[36mSnack Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" INNER JOIN "favorites" ON "snacks"."id" = "favorites"."snack_id" WHERE "favorites"."user_id" = ? AND "snacks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 8], ["LIMIT", 1]]
+  ↳ app/views/favorites/new.html.erb:6
+  [1m[36mSnack Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" INNER JOIN "favorites" ON "snacks"."id" = "favorites"."snack_id" WHERE "favorites"."user_id" = ? AND "snacks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 9], ["LIMIT", 1]]
+  ↳ app/views/favorites/new.html.erb:6
+  [1m[36mSnack Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" INNER JOIN "favorites" ON "snacks"."id" = "favorites"."snack_id" WHERE "favorites"."user_id" = ? AND "snacks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 10], ["LIMIT", 1]]
+  ↳ app/views/favorites/new.html.erb:6
+  [1m[36mSnack Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" INNER JOIN "favorites" ON "snacks"."id" = "favorites"."snack_id" WHERE "favorites"."user_id" = ? AND "snacks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 11], ["LIMIT", 1]]
+  ↳ app/views/favorites/new.html.erb:6
+  Rendered favorites/new.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 35ms (Views: 31.8ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/favorites" for ::1 at 2019-06-18 15:30:19 -0400
+Processing by FavoritesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kcACB+M/rdJhk5xAWN2d44/68IQ1EOmT1PcwGfLL4buqXy7esnb8qNPlzJOw0fUNmaQgKcc1/a7tRImDDWSszw==", "snack_ids"=>["4", "5", "9", "11"], "commit"=>"Choose Your Faves"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.1ms)
+
+
+  
+NoMethodError (undefined method `each' for nil:NilClass):
+  
+app/controllers/favorites_controller.rb:9:in `block in create'
+app/controllers/favorites_controller.rb:8:in `each'
+app/controllers/favorites_controller.rb:8:in `create'
+Started POST "/favorites" for ::1 at 2019-06-18 15:30:39 -0400
+Processing by FavoritesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kcACB+M/rdJhk5xAWN2d44/68IQ1EOmT1PcwGfLL4buqXy7esnb8qNPlzJOw0fUNmaQgKcc1/a7tRImDDWSszw==", "snack_ids"=>["4", "5", "9", "11"], "commit"=>"Choose Your Faves"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 1.1ms)
+
+
+  
+NoMethodError (undefined method `each' for nil:NilClass):
+  
+app/controllers/favorites_controller.rb:8:in `create'
+Started GET "/favorites" for ::1 at 2019-06-18 15:30:55 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favorites"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/favorites/new" for ::1 at 2019-06-18 15:31:03 -0400
+Processing by FavoritesController#new as HTML
+  Rendering favorites/new.html.erb within layouts/application
+  [1m[36mSnack Load (0.2ms)[0m  [1m[34mSELECT "snacks".* FROM "snacks"[0m
+  ↳ app/views/favorites/new.html.erb:4
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mSnack Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" INNER JOIN "favorites" ON "snacks"."id" = "favorites"."snack_id" WHERE "favorites"."user_id" = ? AND "snacks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 4], ["LIMIT", 1]]
+  ↳ app/views/favorites/new.html.erb:6
+  [1m[36mSnack Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" INNER JOIN "favorites" ON "snacks"."id" = "favorites"."snack_id" WHERE "favorites"."user_id" = ? AND "snacks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 5], ["LIMIT", 1]]
+  ↳ app/views/favorites/new.html.erb:6
+  [1m[36mSnack Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" INNER JOIN "favorites" ON "snacks"."id" = "favorites"."snack_id" WHERE "favorites"."user_id" = ? AND "snacks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 6], ["LIMIT", 1]]
+  ↳ app/views/favorites/new.html.erb:6
+  [1m[36mSnack Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" INNER JOIN "favorites" ON "snacks"."id" = "favorites"."snack_id" WHERE "favorites"."user_id" = ? AND "snacks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 7], ["LIMIT", 1]]
+  ↳ app/views/favorites/new.html.erb:6
+  [1m[36mSnack Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" INNER JOIN "favorites" ON "snacks"."id" = "favorites"."snack_id" WHERE "favorites"."user_id" = ? AND "snacks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 8], ["LIMIT", 1]]
+  ↳ app/views/favorites/new.html.erb:6
+  [1m[36mSnack Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" INNER JOIN "favorites" ON "snacks"."id" = "favorites"."snack_id" WHERE "favorites"."user_id" = ? AND "snacks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 9], ["LIMIT", 1]]
+  ↳ app/views/favorites/new.html.erb:6
+  [1m[36mSnack Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" INNER JOIN "favorites" ON "snacks"."id" = "favorites"."snack_id" WHERE "favorites"."user_id" = ? AND "snacks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 10], ["LIMIT", 1]]
+  ↳ app/views/favorites/new.html.erb:6
+  [1m[36mSnack Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" INNER JOIN "favorites" ON "snacks"."id" = "favorites"."snack_id" WHERE "favorites"."user_id" = ? AND "snacks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 11], ["LIMIT", 1]]
+  ↳ app/views/favorites/new.html.erb:6
+  Rendered favorites/new.html.erb within layouts/application (31.0ms)
+Completed 200 OK in 61ms (Views: 50.5ms | ActiveRecord: 3.5ms)
+
+
+Started POST "/favorites" for ::1 at 2019-06-18 15:31:05 -0400
+Processing by FavoritesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NWPA7tEWfnUdPZBRNjrP733diFIBr5NYvY5W3TUa4JMO/Ow3gF8vD69LwILeNqcBa4NY//OKh2WEPe9HyrWt5w==", "snack_ids"=>["4", "5", "9", "11"], "commit"=>"Choose Your Faves"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mSnack Load (0.3ms)[0m  [1m[34mSELECT "snacks".* FROM "snacks" INNER JOIN "favorites" ON "snacks"."id" = "favorites"."snack_id" WHERE "favorites"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/favorites_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/favorites_controller.rb:8
+  [1m[36mFavorite Destroy (1.1ms)[0m  [1m[31mDELETE FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."snack_id" IN (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 1], ["snack_id", 4], ["snack_id", 11], ["snack_id", 4], ["snack_id", 5], ["snack_id", 11], ["snack_id", 4], ["snack_id", 5], ["snack_id", 9], ["snack_id", 11]]
+  ↳ app/controllers/favorites_controller.rb:8
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/favorites_controller.rb:8
+  [1m[36mSnack Load (0.3ms)[0m  [1m[34mSELECT  "snacks".* FROM "snacks" WHERE "snacks"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/favorites_controller.rb:11
+  [1m[36mFavorite Create (0.6ms)[0m  [1m[32mINSERT INTO "favorites" ("snack_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["snack_id", 4], ["user_id", 1], ["created_at", "2019-06-18 19:31:05.227456"], ["updated_at", "2019-06-18 19:31:05.227456"]]
+  ↳ app/controllers/favorites_controller.rb:11
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/favorites_controller.rb:11
+  [1m[36mSnack Load (0.1ms)[0m  [1m[34mSELECT  "snacks".* FROM "snacks" WHERE "snacks"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:10
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/favorites_controller.rb:11
+  [1m[36mFavorite Create (0.5ms)[0m  [1m[32mINSERT INTO "favorites" ("snack_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["snack_id", 5], ["user_id", 1], ["created_at", "2019-06-18 19:31:05.232341"], ["updated_at", "2019-06-18 19:31:05.232341"]]
+  ↳ app/controllers/favorites_controller.rb:11
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/favorites_controller.rb:11
+  [1m[36mSnack Load (0.2ms)[0m  [1m[34mSELECT  "snacks".* FROM "snacks" WHERE "snacks"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:10
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/favorites_controller.rb:11
+  [1m[36mFavorite Create (0.3ms)[0m  [1m[32mINSERT INTO "favorites" ("snack_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["snack_id", 9], ["user_id", 1], ["created_at", "2019-06-18 19:31:05.236842"], ["updated_at", "2019-06-18 19:31:05.236842"]]
+  ↳ app/controllers/favorites_controller.rb:11
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/favorites_controller.rb:11
+  [1m[36mSnack Load (0.1ms)[0m  [1m[34mSELECT  "snacks".* FROM "snacks" WHERE "snacks"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:10
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/favorites_controller.rb:11
+  [1m[36mFavorite Create (0.5ms)[0m  [1m[32mINSERT INTO "favorites" ("snack_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["snack_id", 11], ["user_id", 1], ["created_at", "2019-06-18 19:31:05.240560"], ["updated_at", "2019-06-18 19:31:05.240560"]]
+  ↳ app/controllers/favorites_controller.rb:11
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/favorites_controller.rb:11
+Redirected to http://localhost:3000/snacks
+Completed 302 Found in 49ms (ActiveRecord: 11.8ms)
+
+
+Started GET "/snacks" for ::1 at 2019-06-18 15:31:05 -0400
+Processing by SnacksController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/snacks_controller.rb:12
+  Rendering snacks/index.html.erb within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mSnack Load (0.1ms)[0m  [1m[34mSELECT "snacks".* FROM "snacks" INNER JOIN "favorites" ON "snacks"."id" = "favorites"."snack_id" WHERE "favorites"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/snacks/index.html.erb:6
+  Rendered snacks/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 26ms (Views: 23.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/snacks" for ::1 at 2019-06-18 15:32:15 -0400
+Processing by SnacksController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/snacks_controller.rb:12
+  Rendering snacks/index.html.erb within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mSnack Load (0.2ms)[0m  [1m[34mSELECT "snacks".* FROM "snacks" INNER JOIN "favorites" ON "snacks"."id" = "favorites"."snack_id" WHERE "favorites"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/snacks/index.html.erb:6
+  Rendered snacks/index.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 47ms (Views: 32.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/snacks" for ::1 at 2019-06-18 15:32:25 -0400
+Processing by SnacksController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/snacks_controller.rb:12
+  Rendering snacks/index.html.erb within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mSnack Load (0.2ms)[0m  [1m[34mSELECT "snacks".* FROM "snacks" INNER JOIN "favorites" ON "snacks"."id" = "favorites"."snack_id" WHERE "favorites"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/snacks/index.html.erb:6
+  Rendered snacks/index.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 46ms (Views: 29.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/favorites/new" for ::1 at 2019-06-18 15:32:27 -0400
+Processing by FavoritesController#new as HTML
+  Rendering favorites/new.html.erb within layouts/application
+  [1m[36mSnack Load (0.2ms)[0m  [1m[34mSELECT "snacks".* FROM "snacks"[0m
+  ↳ app/views/favorites/new.html.erb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mSnack Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" INNER JOIN "favorites" ON "snacks"."id" = "favorites"."snack_id" WHERE "favorites"."user_id" = ? AND "snacks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 4], ["LIMIT", 1]]
+  ↳ app/views/favorites/new.html.erb:6
+  [1m[36mSnack Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" INNER JOIN "favorites" ON "snacks"."id" = "favorites"."snack_id" WHERE "favorites"."user_id" = ? AND "snacks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 5], ["LIMIT", 1]]
+  ↳ app/views/favorites/new.html.erb:6
+  [1m[36mSnack Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" INNER JOIN "favorites" ON "snacks"."id" = "favorites"."snack_id" WHERE "favorites"."user_id" = ? AND "snacks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 6], ["LIMIT", 1]]
+  ↳ app/views/favorites/new.html.erb:6
+  [1m[36mSnack Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" INNER JOIN "favorites" ON "snacks"."id" = "favorites"."snack_id" WHERE "favorites"."user_id" = ? AND "snacks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 7], ["LIMIT", 1]]
+  ↳ app/views/favorites/new.html.erb:6
+  [1m[36mSnack Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" INNER JOIN "favorites" ON "snacks"."id" = "favorites"."snack_id" WHERE "favorites"."user_id" = ? AND "snacks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 8], ["LIMIT", 1]]
+  ↳ app/views/favorites/new.html.erb:6
+  [1m[36mSnack Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" INNER JOIN "favorites" ON "snacks"."id" = "favorites"."snack_id" WHERE "favorites"."user_id" = ? AND "snacks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 9], ["LIMIT", 1]]
+  ↳ app/views/favorites/new.html.erb:6
+  [1m[36mSnack Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" INNER JOIN "favorites" ON "snacks"."id" = "favorites"."snack_id" WHERE "favorites"."user_id" = ? AND "snacks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 10], ["LIMIT", 1]]
+  ↳ app/views/favorites/new.html.erb:6
+  [1m[36mSnack Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" INNER JOIN "favorites" ON "snacks"."id" = "favorites"."snack_id" WHERE "favorites"."user_id" = ? AND "snacks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 11], ["LIMIT", 1]]
+  ↳ app/views/favorites/new.html.erb:6
+  Rendered favorites/new.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 50ms (Views: 45.6ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/favorites" for ::1 at 2019-06-18 15:32:31 -0400
+Processing by FavoritesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yummLHAEed+vgraQo19hwBGJBlGhMNbqJqkw3l67XTjxdor1IU0opR305kNLUwkuB9fW/FMVwtcfGolEoRQQTA==", "snack_ids"=>["4", "5", "6", "9", "11"], "commit"=>"Choose Your Faves"}
+  [1m[36mSnack Load (0.2ms)[0m  [1m[34mSELECT  "snacks".* FROM "snacks" WHERE "snacks"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:9
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mSnack Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" INNER JOIN "favorites" ON "snacks"."id" = "favorites"."snack_id" WHERE "favorites"."user_id" = ? AND "snacks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:10
+  [1m[36mSnack Load (0.1ms)[0m  [1m[34mSELECT  "snacks".* FROM "snacks" WHERE "snacks"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:9
+  [1m[36mSnack Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" INNER JOIN "favorites" ON "snacks"."id" = "favorites"."snack_id" WHERE "favorites"."user_id" = ? AND "snacks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:10
+  [1m[36mSnack Load (0.1ms)[0m  [1m[34mSELECT  "snacks".* FROM "snacks" WHERE "snacks"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:9
+  [1m[36mSnack Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" INNER JOIN "favorites" ON "snacks"."id" = "favorites"."snack_id" WHERE "favorites"."user_id" = ? AND "snacks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:10
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/favorites_controller.rb:11
+  [1m[36mFavorite Create (0.5ms)[0m  [1m[32mINSERT INTO "favorites" ("snack_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["snack_id", 6], ["user_id", 1], ["created_at", "2019-06-18 19:32:31.175441"], ["updated_at", "2019-06-18 19:32:31.175441"]]
+  ↳ app/controllers/favorites_controller.rb:11
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/favorites_controller.rb:11
+  [1m[36mSnack Load (0.1ms)[0m  [1m[34mSELECT  "snacks".* FROM "snacks" WHERE "snacks"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:9
+  [1m[36mSnack Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" INNER JOIN "favorites" ON "snacks"."id" = "favorites"."snack_id" WHERE "favorites"."user_id" = ? AND "snacks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:10
+  [1m[36mSnack Load (0.1ms)[0m  [1m[34mSELECT  "snacks".* FROM "snacks" WHERE "snacks"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:9
+  [1m[36mSnack Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" INNER JOIN "favorites" ON "snacks"."id" = "favorites"."snack_id" WHERE "favorites"."user_id" = ? AND "snacks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:10
+Redirected to http://localhost:3000/snacks
+Completed 302 Found in 24ms (ActiveRecord: 5.1ms)
+
+
+Started GET "/snacks" for ::1 at 2019-06-18 15:32:31 -0400
+Processing by SnacksController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/snacks_controller.rb:12
+  Rendering snacks/index.html.erb within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mSnack Load (0.1ms)[0m  [1m[34mSELECT "snacks".* FROM "snacks" INNER JOIN "favorites" ON "snacks"."id" = "favorites"."snack_id" WHERE "favorites"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/snacks/index.html.erb:6
+  Rendered snacks/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 23ms (Views: 20.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/favorites/new" for ::1 at 2019-06-18 15:32:40 -0400
+Processing by FavoritesController#new as HTML
+  Rendering favorites/new.html.erb within layouts/application
+  [1m[36mSnack Load (0.2ms)[0m  [1m[34mSELECT "snacks".* FROM "snacks"[0m
+  ↳ app/views/favorites/new.html.erb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mSnack Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" INNER JOIN "favorites" ON "snacks"."id" = "favorites"."snack_id" WHERE "favorites"."user_id" = ? AND "snacks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 4], ["LIMIT", 1]]
+  ↳ app/views/favorites/new.html.erb:6
+  [1m[36mSnack Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" INNER JOIN "favorites" ON "snacks"."id" = "favorites"."snack_id" WHERE "favorites"."user_id" = ? AND "snacks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 5], ["LIMIT", 1]]
+  ↳ app/views/favorites/new.html.erb:6
+  [1m[36mSnack Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" INNER JOIN "favorites" ON "snacks"."id" = "favorites"."snack_id" WHERE "favorites"."user_id" = ? AND "snacks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 6], ["LIMIT", 1]]
+  ↳ app/views/favorites/new.html.erb:6
+  [1m[36mSnack Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" INNER JOIN "favorites" ON "snacks"."id" = "favorites"."snack_id" WHERE "favorites"."user_id" = ? AND "snacks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 7], ["LIMIT", 1]]
+  ↳ app/views/favorites/new.html.erb:6
+  [1m[36mSnack Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" INNER JOIN "favorites" ON "snacks"."id" = "favorites"."snack_id" WHERE "favorites"."user_id" = ? AND "snacks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 8], ["LIMIT", 1]]
+  ↳ app/views/favorites/new.html.erb:6
+  [1m[36mSnack Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" INNER JOIN "favorites" ON "snacks"."id" = "favorites"."snack_id" WHERE "favorites"."user_id" = ? AND "snacks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 9], ["LIMIT", 1]]
+  ↳ app/views/favorites/new.html.erb:6
+  [1m[36mSnack Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" INNER JOIN "favorites" ON "snacks"."id" = "favorites"."snack_id" WHERE "favorites"."user_id" = ? AND "snacks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 10], ["LIMIT", 1]]
+  ↳ app/views/favorites/new.html.erb:6
+  [1m[36mSnack Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" INNER JOIN "favorites" ON "snacks"."id" = "favorites"."snack_id" WHERE "favorites"."user_id" = ? AND "snacks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 11], ["LIMIT", 1]]
+  ↳ app/views/favorites/new.html.erb:6
+  Rendered favorites/new.html.erb within layouts/application (21.2ms)
+Completed 200 OK in 77ms (Views: 73.3ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/favorites" for ::1 at 2019-06-18 15:32:43 -0400
+Processing by FavoritesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ww/1e58h9QiKouGK8FTAyONTXsrVpw449IPO1+WgcCNgkNmizmikcjjUsVkYWKgm9Q2OZyeCGgXNMHdNGg89Vw==", "snack_ids"=>["4", "9", "11"], "commit"=>"Choose Your Faves"}
+  [1m[36mSnack Load (0.2ms)[0m  [1m[34mSELECT  "snacks".* FROM "snacks" WHERE "snacks"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:9
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mSnack Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" INNER JOIN "favorites" ON "snacks"."id" = "favorites"."snack_id" WHERE "favorites"."user_id" = ? AND "snacks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:10
+  [1m[36mSnack Load (0.2ms)[0m  [1m[34mSELECT  "snacks".* FROM "snacks" WHERE "snacks"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:9
+  [1m[36mSnack Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" INNER JOIN "favorites" ON "snacks"."id" = "favorites"."snack_id" WHERE "favorites"."user_id" = ? AND "snacks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:10
+  [1m[36mSnack Load (0.1ms)[0m  [1m[34mSELECT  "snacks".* FROM "snacks" WHERE "snacks"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:9
+  [1m[36mSnack Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "snacks" INNER JOIN "favorites" ON "snacks"."id" = "favorites"."snack_id" WHERE "favorites"."user_id" = ? AND "snacks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:10
+Redirected to http://localhost:3000/snacks
+Completed 302 Found in 16ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/snacks" for ::1 at 2019-06-18 15:32:43 -0400
+Processing by SnacksController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/snacks_controller.rb:12
+  Rendering snacks/index.html.erb within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mSnack Load (0.2ms)[0m  [1m[34mSELECT "snacks".* FROM "snacks" INNER JOIN "favorites" ON "snacks"."id" = "favorites"."snack_id" WHERE "favorites"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/snacks/index.html.erb:6
+  Rendered snacks/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 27ms (Views: 23.6ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/logout" for ::1 at 2019-06-18 15:34:40 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"GPLcl5enA4X8ZYYqgIolO9fhtW3Rz6MP/RBoaW5z+88jbfBOxu5S/04T1vlohk3Vwb9lwCPqtzLEo9Hzkdy2uw=="}
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2019-06-18 15:34:40 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+Completed 200 OK in 25ms (Views: 23.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/favorites/new" for ::1 at 2019-06-18 15:34:42 -0400
+Processing by FavoritesController#new as HTML
+Redirected to http://localhost:3000/login
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/favorites_controller.rb:7:in `new'
+Started GET "/favorites/new" for ::1 at 2019-06-18 15:35:04 -0400
+Processing by FavoritesController#new as HTML
+  Rendering favorites/new.html.erb within layouts/application
+  Rendered favorites/new.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <h1>Choose Your Favorites</h1>
+    2: 
+    3: <%= form_tag favorites_path do %>
+    4:     <% @snacks.each do |s| %>
+    5:         <div>
+    6:             <%= check_box_tag "snack_ids[]", s.id, checked = get_current_user.snacks.include?(s) %>
+    7:             <%= s.name %>
+  
+app/views/favorites/new.html.erb:4:in `block in _app_views_favorites_new_html_erb___1952741990616196809_70266892942320'
+app/views/favorites/new.html.erb:3:in `_app_views_favorites_new_html_erb___1952741990616196809_70266892942320'
+Started GET "/favorites/new" for ::1 at 2019-06-18 15:35:14 -0400
+Processing by FavoritesController#new as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2019-06-18 15:35:14 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+Completed 200 OK in 30ms (Views: 28.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/favorites/new" for ::1 at 2019-06-18 15:35:17 -0400
+Processing by FavoritesController#new as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2019-06-18 15:35:20 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+Completed 200 OK in 27ms (Views: 25.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/favorites/new" for ::1 at 2019-06-18 15:35:57 -0400
+Processing by FavoritesController#new as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2019-06-18 15:35:57 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+Completed 200 OK in 46ms (Views: 43.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/favorites/new" for ::1 at 2019-06-18 15:36:19 -0400
+Processing by FavoritesController#new as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2019-06-18 15:36:19 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+Completed 200 OK in 29ms (Views: 28.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/snacks" for ::1 at 2019-06-18 15:40:33 -0400
+Processing by SnacksController#index as HTML
+  Rendering snacks/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mSnack Load (0.2ms)[0m  [1m[34mSELECT "snacks".* FROM "snacks"[0m
+  ↳ app/views/snacks/index.html.erb:6
+  Rendered snacks/index.html.erb within layouts/application (17.6ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+Completed 200 OK in 86ms (Views: 77.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/snacks/9" for ::1 at 2019-06-18 15:40:38 -0400
+Processing by SnacksController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mSnack Load (0.3ms)[0m  [1m[34mSELECT  "snacks".* FROM "snacks" WHERE "snacks"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/snacks_controller.rb:58
+  Rendering snacks/show.html.erb within layouts/application
+  [1m[36mRetailer Load (0.2ms)[0m  [1m[34mSELECT  "retailers".* FROM "retailers" WHERE "retailers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/snacks/show.html.erb:2
+  Rendered snacks/show.html.erb within layouts/application (17.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+Completed 200 OK in 48ms (Views: 41.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/snacks/9/edit" for ::1 at 2019-06-18 15:40:41 -0400
+Processing by SnacksController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mSnack Load (2.1ms)[0m  [1m[34mSELECT  "snacks".* FROM "snacks" WHERE "snacks"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/snacks_controller.rb:58
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+Redirected to http://localhost:3000/login
+Filter chain halted as :authorized rendered or redirected
+Completed 302 Found in 6ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/login" for ::1 at 2019-06-18 15:40:41 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+Completed 200 OK in 24ms (Views: 22.9ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/snacks/9" for ::1 at 2019-06-18 15:40:45 -0400
+Processing by SnacksController#destroy as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MbqPeO+zH6NGdvmr/6tOeUfL9cHE+ib07AOheYeyWcTV3scDgU0dayC8y5wngbdTmf9NmVjfUTFczr/R3AObMw==", "commit"=>"Delete", "id"=>"9"}
+  [1m[36mSnack Load (0.2ms)[0m  [1m[34mSELECT  "snacks".* FROM "snacks" WHERE "snacks"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/snacks_controller.rb:58
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+Redirected to http://localhost:3000/login
+Filter chain halted as :authorized rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/login" for ::1 at 2019-06-18 15:40:45 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+Completed 200 OK in 27ms (Views: 25.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/snacks/9" for ::1 at 2019-06-18 15:41:18 -0400
+Processing by SnacksController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mSnack Load (0.2ms)[0m  [1m[34mSELECT  "snacks".* FROM "snacks" WHERE "snacks"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/snacks_controller.rb:58
+  Rendering snacks/show.html.erb within layouts/application
+  [1m[36mRetailer Load (0.1ms)[0m  [1m[34mSELECT  "retailers".* FROM "retailers" WHERE "retailers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/snacks/show.html.erb:2
+  Rendered snacks/show.html.erb within layouts/application (2.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+Completed 200 OK in 34ms (Views: 31.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/snacks" for ::1 at 2019-06-18 15:43:02 -0400
+Processing by SnacksController#index as HTML
+  Rendering snacks/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mSnack Load (0.1ms)[0m  [1m[34mSELECT "snacks".* FROM "snacks"[0m
+  ↳ app/views/snacks/index.html.erb:10
+  Rendered snacks/index.html.erb within layouts/application (9.9ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+Completed 200 OK in 34ms (Views: 28.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/snacks" for ::1 at 2019-06-18 15:43:03 -0400
+Processing by SnacksController#index as HTML
+  Rendering snacks/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mSnack Load (0.2ms)[0m  [1m[34mSELECT "snacks".* FROM "snacks"[0m
+  ↳ app/views/snacks/index.html.erb:10
+  Rendered snacks/index.html.erb within layouts/application (2.8ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+Completed 200 OK in 47ms (Views: 45.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/login" for ::1 at 2019-06-18 15:43:05 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+Completed 200 OK in 41ms (Views: 38.8ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/login" for ::1 at 2019-06-18 15:43:09 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kl0p47Jp8KKQDn9lINcMuCWFpkD0CwO9jPXnZKa+f7rkSlRu8T8yyEe1iwJy+AKRba0EToXaTuS9voebfcDftQ==", "username"=>"paul", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "paul"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8
+Redirected to http://localhost:3000/snacks
+Completed 302 Found in 238ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/snacks" for ::1 at 2019-06-18 15:43:09 -0400
+Processing by SnacksController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/snacks_controller.rb:12
+  Rendering snacks/index.html.erb within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mSnack Load (0.2ms)[0m  [1m[34mSELECT "snacks".* FROM "snacks" INNER JOIN "favorites" ON "snacks"."id" = "favorites"."snack_id" WHERE "favorites"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/snacks/index.html.erb:10
+  Rendered snacks/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 30ms (Views: 25.2ms | ActiveRecord: 0.7ms)
+
+
