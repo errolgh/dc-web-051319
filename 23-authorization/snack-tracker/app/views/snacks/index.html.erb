@@ -1,0 +1,17 @@
+<h1><%= get_current_user.username %>'s Snacks</h1>
+
+
+
+<h2><%= get_current_user.username %>'s favorite cookie is <%= cookies["favorite_snack"] %></h2>
+<h2>But <%= get_current_user.username %>'s secret favorite is <%= session["secret_favorite"] %></h2>
+<h3>The last snack <%= get_current_user.username %> looked at is <%= cookies["last_snack"] %></h3>
+
+<ul id="snack-list">
+    <% @snacks.each do |snack| %>
+        <li class="snack-list-item">
+            <%= link_to snack.name, snack_path(snack) %>
+        </li>
+    <% end %>
+</ul>
+
+<%= link_to "Make a New Snack", new_snack_path %>
