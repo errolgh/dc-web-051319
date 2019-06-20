@@ -1,0 +1,7 @@
+<% if @is_palindrome %>
+    <h1>Congratulations!  <%= @word %> is a palindrome!</h1>
+<% else %>
+    <h1>We're sorry!  <%= @word %> is not a palindrome!</h1>
+<% end %> 
+
+<%= link_to "Try Again", root_path %>
