@@ -15,7 +15,7 @@
 
 | Selector name                   | Return shape   | Return type    | Reference             | forEach? |
 | ------------------------------- | -------------- | -------------- | --------------------- | -------- |
-| `node.getElementById()`        | Single element | Element        | https://goo.gl/8cHGoy | N/A      |
+| `node.getElementById()`         | Single element | Element        | https://goo.gl/8cHGoy | N/A      |
 | `node.getElementsByClassName()` | Collection     | HTMLCollection | https://goo.gl/qcAhcp | No       |
 | `node.getElementsByTagName()`   | Collection     | HTMLCollection | https://goo.gl/QHozSh | No       |
 | `node.querySelector()`          | Single element | Element        | https://goo.gl/6Pqbcc | N/A      |
