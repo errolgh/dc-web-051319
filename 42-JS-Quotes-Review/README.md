@@ -27,6 +27,7 @@ Clicking the support button will increase the number of supporters for this part
 
 API Routes
 GET http://localhost:3000/quotes
+&nbsp;
 POST http://localhost:3000/quotes
 
 ```
@@ -59,6 +60,7 @@ data:
 }
 ```
 DELETE http://localhost:3000/quotes/:id
+&nbsp;
 © 2019 GitHub, Inc.
 Terms
 Privacy
