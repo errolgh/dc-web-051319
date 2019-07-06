@@ -28,29 +28,36 @@ Clicking the support button will increase the number of supporters for this part
 API Routes
 GET http://localhost:3000/quotes
 POST http://localhost:3000/quotes
+
+```
 headers:
 {
   "Content-Type": "application/json",
   Accept: "application/json"
 }
-
+```
+```
 data:
 {
   quote: "Don't count the days, make the days count.",
   supporters: 0,
   author: "Mike Tyson"
 }
+```
+```
 PATCH http://localhost:3000/quotes/:id
 headers:
 {
   "Content-Type": "application/json",
   Accept: "application/json"
 }
-
+```
+```
 data:
 {
   supporters: 1
 }
+```
 DELETE http://localhost:3000/quotes/:id
 © 2019 GitHub, Inc.
 Terms
