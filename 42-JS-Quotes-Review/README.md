@@ -6,7 +6,7 @@ Deliverables
 Populate page with quotes with a GET request to http://localhost:3000/quotes.
 
 Each quotes should have the following structure:
-
+```
 <li class="card">
   <blockquote>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
@@ -18,6 +18,7 @@ Each quotes should have the following structure:
     </div>
   </blockquote>
 </li>
+```
 Submitting the form creates a new quote and adds it to the list of quotes without having to refresh the page. (Whether you choose to optimistically render or not is up to you).
 
 Clicking the delete button should delete the respective quote from the database and remove it from the page without having to refresh.
