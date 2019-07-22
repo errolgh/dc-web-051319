@@ -56,9 +56,16 @@ function showBookDetails(book) {
 function addUser(book) {
     let me = {"id":1, "username":"pouros"}
 
+    
+
    let foundUser = book.users.find(userObj => {
        return userObj.id === me.id
    })
+
+   console.log(foundUser)
+   console.log(me)
+
+ 
 
    if (foundUser) {
        alert("You already read this book")
