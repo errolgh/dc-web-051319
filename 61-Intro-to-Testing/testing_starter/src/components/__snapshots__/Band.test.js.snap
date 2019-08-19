@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Band renders correctly 1`] = `
+<div
+  className="band-card"
+>
+  <h2>
+    The Smiths
+  </h2>
+  <img
+    src={null}
+  />
+  <div>
+    Genre: 
+    brit pop
+  </div>
+  <button
+    onClick={[Function]}
+  >
+    Delete
+  </button>
+</div>
+`;
